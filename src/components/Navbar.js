@@ -12,13 +12,7 @@ import {
   DropdownMenu,
   DropdownItem
 } from 'reactstrap'
-import styled from 'styled-components'
-
-const StyledNavbar = styled(Navbar)`
- && {
-   padding: 1rem;
- }
-`
+import { Link } from 'react-router-dom'
 
 export default class Example extends React.Component {
   constructor(props) {
@@ -37,16 +31,16 @@ export default class Example extends React.Component {
   render() {
     return (
       <div>
-        <StyledNavbar dark color="primary" expand="md">
-          <NavbarBrand href="/">Puppy Shop</NavbarBrand>
+        <Navbar dark color="primary" expand="sm" className="p-3 shadow-sm">
+          <NavbarBrand tag={Link} to="/">Puppy Shop</NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
               <NavItem>
-                <NavLink href="/login/">Login</NavLink>
+                <NavLink tag={Link} to="login">Login</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="/cart/">Cart</NavLink>
+                <NavLink tag={Link} to="/cart">Cart</NavLink>
               </NavItem>
               <UncontrolledDropdown nav inNavbar>
                 <DropdownToggle nav caret>
@@ -59,7 +53,7 @@ export default class Example extends React.Component {
               </UncontrolledDropdown>
             </Nav>
           </Collapse>
-        </StyledNavbar>
+        </Navbar>
       </div>
     )
   }
