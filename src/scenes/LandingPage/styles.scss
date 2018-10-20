@@ -1,0 +1,15 @@
+#landingpage-jumbotron {
+  border-radius: 0;
+  background: #fff;
+  padding: 40px 16px 60px;
+  margin-bottom: 4rem;
+  .container {
+    width: 600px;
+    max-width: 90%;
+  }
+}
+@media (min-width: 768px) {
+  #landingpage-jumbotron {
+    padding: 72px 16px 96px;
+  }
+}
