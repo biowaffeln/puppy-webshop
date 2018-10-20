@@ -1,18 +1,21 @@
 import React from 'react'
 import {
   Container,
-  Jumbotron
+  Jumbotron,
+  Button
 } from 'reactstrap'
 import styled from 'styled-components'
+import PuppyList from './LandingPage/PuppyList'
 
 const StyledJumbotron = styled(Jumbotron)`
   && {
-    background: #f9f9f9;
+    border-radius: 0;
+    background: #fff;
     padding: 48px 16px;
+    margin-bottom: 4rem;
   }
   @media (min-width: 768px) {
     && {
-      background: #f9f9f9;
       padding: 96px 16px;
     }
   }
@@ -35,8 +38,10 @@ const LandingPage = () =>
           This is a very good place to do this,
           and surely buying cute puppies on the internet isn't illegal.
         </p>
+        <Button outline color="primary">Let's do this!</Button>
       </StyledContainer>
     </StyledJumbotron>
+    <PuppyList />
   </div>
 
 export default LandingPage
