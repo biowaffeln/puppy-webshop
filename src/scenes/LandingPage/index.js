@@ -4,7 +4,7 @@ import {
   Jumbotron,
   Button
 } from 'reactstrap'
-import PuppyList from './PuppyList'
+import PuppyListContainer from './PuppyListContainer'
 import './styles.scss'
 
 const LandingPage = () =>
@@ -19,7 +19,7 @@ const LandingPage = () =>
         <Button outline color="primary">Let's do this!</Button>
       </Container>
     </Jumbotron>
-    <PuppyList />
+    <PuppyListContainer />
   </div>
 
 export default LandingPage
