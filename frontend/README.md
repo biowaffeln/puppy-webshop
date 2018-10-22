@@ -1,4 +1,7 @@
 # puppy-webshop frontend
 
+The frontend for the puppy webshop project.
+
 ## install
-run `yarn install` or `npm install` to download the dependencies and start the development server with `yarn start` or `npm start`.
+Run `npm install` or `yarn install` to download the dependencies.
+To begin the development, run `npm start` or `yarn start`. To create a production bundle, use `npm run build` or `yarn build`.
