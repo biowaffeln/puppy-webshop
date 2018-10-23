@@ -15,19 +15,17 @@ import {
 import { Link } from 'react-router-dom'
 
 export default class Example extends React.Component {
-  constructor(props) {
-    super(props)
 
-    this.toggle = this.toggle.bind(this)
-    this.state = {
-      isOpen: false
-    }
+  state = {
+    isOpen: false
   }
-  toggle() {
-    this.setState({
-      isOpen: !this.state.isOpen
-    })
+
+  toggle = () => {
+    this.setState(({ isOpen }) => ({
+      isOpen: !isOpen
+    }))
   }
+
   render() {
     return (
       <div>
@@ -37,7 +35,7 @@ export default class Example extends React.Component {
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
               <NavItem>
-                <NavLink tag={Link} to="login">Login</NavLink>
+                <NavLink tag={Link} to="/login">Login</NavLink>
               </NavItem>
               <NavItem>
                 <NavLink tag={Link} to="/cart">Cart</NavLink>
