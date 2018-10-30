@@ -13,6 +13,7 @@ import {
   DropdownItem
 } from 'reactstrap'
 import { Link } from 'react-router-dom'
+import Logo from './Logo'
 
 export default class Example extends React.Component {
 
@@ -30,7 +31,9 @@ export default class Example extends React.Component {
     return (
       <div>
         <Navbar dark color="primary" expand="sm" className="p-3 shadow">
-          <NavbarBrand tag={Link} to="/">Puppy Shop</NavbarBrand>
+          <NavbarBrand tag={Link} to="/">
+          <Logo /> 
+          </NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
