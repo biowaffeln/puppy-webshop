@@ -4,14 +4,14 @@ import {
   CardTitle, CardSubtitle, Button
 } from 'reactstrap'
 
-const PuppyCard = ({ name, imageUrl }) => {
+const PuppyCard = ({ name, imageUrl, price }) => {
   return (
     <div>
       <Card className="shadow-sm">
         <CardImg top width="100%" src={imageUrl} alt="Puppy Image" />
         <CardBody>
           <CardTitle>{name}</CardTitle>
-          <CardSubtitle>50.00 $</CardSubtitle>
+          <CardSubtitle>{price} €</CardSubtitle>
           <CardText>Some quick example text to build on the card title and make up the bulk of the card's content.</CardText>
           <Button color="primary">Buy!</Button>
         </CardBody>

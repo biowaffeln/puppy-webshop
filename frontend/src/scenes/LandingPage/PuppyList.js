@@ -7,7 +7,7 @@ const PuppyList = ({ puppies }) =>
     <Row>
       {puppies.map(puppy =>
         <Col xs="12" md="6" lg="4" className="mb-4" key={puppy.id}>
-          <PuppyCard name={puppy.name} imageUrl={puppy.imageUrl} />
+          <PuppyCard {...puppy} />
         </Col>
       )}
     </Row>
