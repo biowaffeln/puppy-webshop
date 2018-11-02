@@ -2,9 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0e96f22d-c018-457b-8121-0280b33d7706" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Backend/Backend/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/Backend/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Backend/manage.py" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/manage.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Backend/db.sqlite3" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Backend/poll/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/poll/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -12,29 +14,50 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/puppy_webshop$manage.coverage" NAME="manage Coverage Results" MODIFIED="1540297164065" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Backend" />
-  </component>
   <component name="FUSProjectUsageTrigger">
     <session id="-1661159812">
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="py" value="168" />
+          <entry key="manage" value="26" />
+          <entry key="py" value="426" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Python" value="168" />
+          <entry key="Python" value="452" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="6" />
+          <entry key="project.closed" value="9" />
           <entry key="project.open.time.0" value="1" />
-          <entry key="project.open.time.11" value="1" />
+          <entry key="project.open.time.10" value="1" />
+          <entry key="project.open.time.11" value="2" />
           <entry key="project.open.time.14" value="1" />
+          <entry key="project.open.time.15" value="1" />
+          <entry key="project.open.time.3" value="1" />
+          <entry key="project.open.time.41" value="1" />
           <entry key="project.open.time.8" value="2" />
-          <entry key="project.opened" value="5" />
+          <entry key="project.opened" value="10" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="html" value="1" />
+          <entry key="js" value="1" />
+          <entry key="py" value="5" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="HTML" value="1" />
+          <entry key="JavaScript" value="1" />
+          <entry key="Python" value="5" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.vcs.git.usages">
+        <counts>
+          <entry key="git.branch.create.new" value="1" />
         </counts>
       </usages-collector>
     </session>
@@ -44,8 +67,19 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Backend/Backend/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="21" selection-start-line="21" selection-end-line="21" />
+            <state relative-caret-position="323">
+              <caret line="20" column="1" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/frontend/src/scenes/LandingPage/PuppyList.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <folding>
+                <element signature="e#0#25#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -53,8 +87,22 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Backend/Backend/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1394">
-              <caret line="82" column="25" selection-start-line="82" selection-start-column="25" selection-end-line="82" selection-end-column="25" />
+            <state relative-caret-position="816">
+              <caret line="48" column="59" selection-start-line="48" selection-start-column="59" selection-end-line="48" selection-end-column="59" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/frontend/public/index.html">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Backend/manage.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="15" selection-start-line="15" selection-end-line="15" />
             </state>
           </provider>
         </entry>
@@ -62,14 +110,30 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Backend/poll/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+            <state relative-caret-position="221">
+              <caret line="13" column="34" lean-forward="true" selection-start-line="13" selection-start-column="34" selection-end-line="13" selection-end-column="34" />
               <folding>
-                <marker date="1540469038371" expanded="true" signature="86:174" ph="..." />
-                <marker date="1540469038371" expanded="true" signature="274:279" ph="..." />
+                <marker date="1541159978676" expanded="true" signature="86:174" ph="..." />
+                <marker date="1541159978676" expanded="true" signature="274:276" ph="..." />
+                <marker date="1541159978676" expanded="true" signature="274:279" ph="..." />
               </folding>
             </state>
           </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Backend/poll/migrations/0001_initial.py">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Backend/Backend/wsgi.py">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Backend/poll/admin.py">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -81,14 +145,25 @@
       </list>
     </option>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>templ</find>
+    </findStrings>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/Backend/manage.py" />
         <option value="$PROJECT_DIR$/Backend/Backend/settings.py" />
+        <option value="$PROJECT_DIR$/Backend/Backend/urls.py" />
         <option value="$PROJECT_DIR$/Backend/poll/models.py" />
       </list>
     </option>
@@ -110,34 +185,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="puppy-webshop" type="b2602c69:ProjectViewProjectNode" />
-              <item name="puppy-webshop" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="puppy-webshop" type="b2602c69:ProjectViewProjectNode" />
-              <item name="puppy-webshop" type="462c0819:PsiDirectoryNode" />
-              <item name="Backend" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="puppy-webshop" type="b2602c69:ProjectViewProjectNode" />
-              <item name="puppy-webshop" type="462c0819:PsiDirectoryNode" />
-              <item name="Backend" type="462c0819:PsiDirectoryNode" />
-              <item name="Backend" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="puppy-webshop" type="b2602c69:ProjectViewProjectNode" />
-              <item name="puppy-webshop" type="462c0819:PsiDirectoryNode" />
-              <item name="Backend" type="462c0819:PsiDirectoryNode" />
-              <item name="poll" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
       <pane id="Scope">
         <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
           <expand>
@@ -161,6 +208,34 @@
               <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
               <item name="Backend" type="9f88c78c:ScopeViewTreeModel$FileNode" />
               <item name="poll" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="puppy-webshop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="puppy-webshop" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="puppy-webshop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="puppy-webshop" type="462c0819:PsiDirectoryNode" />
+              <item name="Backend" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="puppy-webshop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="puppy-webshop" type="462c0819:PsiDirectoryNode" />
+              <item name="Backend" type="462c0819:PsiDirectoryNode" />
+              <item name="Backend" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="puppy-webshop" type="b2602c69:ProjectViewProjectNode" />
+              <item name="puppy-webshop" type="462c0819:PsiDirectoryNode" />
+              <item name="Backend" type="462c0819:PsiDirectoryNode" />
+              <item name="poll" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -195,8 +270,52 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.settings">
+  <component name="RunManager" selected="Python.__init__">
     <configuration name="index.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/puppy-webshop/frontend/public/index.html">
+      <method v="2" />
+    </configuration>
+    <configuration name="__init__" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="puppy-webshop" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Backend/poll" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Backend/poll/__init__.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="admin" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="puppy-webshop" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Backend/poll" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Backend/poll/admin.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
     <configuration name="manage" type="PythonConfigurationType" factoryName="Python" temporary="true">
@@ -244,18 +363,12 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="JavaScript Debug.index.html" />
+      <item itemvalue="Python.__init__" />
+      <item itemvalue="Python.admin" />
       <item itemvalue="Python.manage" />
       <item itemvalue="Python.settings" />
+      <item itemvalue="JavaScript Debug.index.html" />
     </list>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Python.manage" />
-        <item itemvalue="Python.manage" />
-        <item itemvalue="Python.settings" />
-        <item itemvalue="JavaScript Debug.index.html" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -267,18 +380,23 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1540281794968</updated>
+      <workItem from="1540976379908" duration="513000" />
     </task>
     <servers />
   </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="513000" />
+  </component>
   <component name="ToolWindowManager">
     <frame x="-5" y="0" width="695" height="878" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.12401884" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22135007" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.30789825" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.31057563" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39920425" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -287,8 +405,9 @@
       <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.33467203" />
-      <window_info anchor="bottom" id="Python Console" order="12" weight="0.32493368" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.8865248" />
+      <window_info anchor="bottom" id="Python Console" order="12" weight="0.31994644" />
+      <window_info anchor="bottom" id="File Transfer" order="13" weight="0.32891247" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -303,34 +422,59 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Backend/manage.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" selection-start-line="15" selection-end-line="15" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/Backend/poll/migrations/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/Backend/Backend/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="21" selection-start-line="21" selection-end-line="21" />
+        <state relative-caret-position="323">
+          <caret line="20" column="1" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="1" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Backend/Backend/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1394">
-          <caret line="82" column="25" selection-start-line="82" selection-start-column="25" selection-end-line="82" selection-end-column="25" />
+        <state relative-caret-position="816">
+          <caret line="48" column="59" selection-start-line="48" selection-start-column="59" selection-end-line="48" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/public/index.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Backend/manage.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Backend/poll/migrations/0001_initial.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Backend/Backend/wsgi.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Backend/poll/admin.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/scenes/LandingPage/PuppyList.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Backend/poll/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+        <state relative-caret-position="221">
+          <caret line="13" column="34" lean-forward="true" selection-start-line="13" selection-start-column="34" selection-end-line="13" selection-end-column="34" />
           <folding>
-            <marker date="1540469038371" expanded="true" signature="86:174" ph="..." />
-            <marker date="1540469038371" expanded="true" signature="274:279" ph="..." />
+            <marker date="1541159978676" expanded="true" signature="86:174" ph="..." />
+            <marker date="1541159978676" expanded="true" signature="274:276" ph="..." />
+            <marker date="1541159978676" expanded="true" signature="274:279" ph="..." />
           </folding>
         </state>
       </provider>
