@@ -30,7 +30,6 @@ class Logo extends React.Component {
           className="basket"
           pose={this.state.hover ? "visible" : "hidden"}
         />
-        Puppy Webshop
       </div>
     )
   }

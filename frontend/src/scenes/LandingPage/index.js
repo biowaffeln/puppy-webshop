@@ -1,25 +1,36 @@
 import React from 'react'
 import {
-  Container,
-  Jumbotron,
-  Button
+    Row,
+    Col,
+    Container,
+    Jumbotron,
+    Button
 } from 'reactstrap'
 import PuppyListContainer from './PuppyListContainer'
 import './styles.scss'
 
 const LandingPage = () =>
-  <div>
-    <Jumbotron className="text-center" id="landingpage-jumbotron">
-      <Container>
-        <h1 className="jumbotron-heading mb-3">Buy cute puppies</h1>
-        <p className="lead text-muted">
-          This is a very good place to do this,
-          and surely buying cute puppies on the internet isn't illegal.
-        </p>
-        <Button outline color="primary">Let's do this!</Button>
-      </Container>
+    <div>
+        <Jumbotron className="text-center" id="landingpage-jumbotron">
+        <Row>
+            <Col>
+            </Col>
+        </Row>
     </Jumbotron>
-    <PuppyListContainer />
-  </div>
+
+        <Container>
+
+            <h1 className="jumbotron-heading mb-3">ADOPT <br/> DON'T <br/> SHOP</h1>
+            <p className="lead text-muted" id="dogs-quote">
+                My name is Boris <br/>
+                i love to chase toys <br/>
+                I'm looking for a new home
+            </p>
+            <Col>
+                <Button outline color="primary">CHANGE A LIFE</Button>
+            </Col>
+        </Container>
+        <PuppyListContainer />
+    </div>
 
 export default LandingPage
