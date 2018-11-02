@@ -8,10 +8,7 @@ class Puppy(models.Model):
     gewicht = models.IntegerField(2)
 
 
-#class Order(models.Model):
- #   id = models.IntegerField(5)
-  #  totalPrice = models.DecimalField(max_digits=100)
-   # date = models.DateTimeField(4)
-    #UserId = models.IntegerField(8)
-
-
+class Order(models.Model):
+    totalPrice = models.DecimalField(max_digits=100, decimal_places=2)
+    date = models.DateTimeField(4)
+    UserId = models.IntegerField(8)
