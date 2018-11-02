@@ -26,8 +26,7 @@ SECRET_KEY = 'bx1znfev-xpkjxss0$t@%*rgc_1v(k(74pkd+rb4k4186wqs+)'
 DEBUG = True
 
 ALLOWED_HOSTS = [
- '141.62.75.70:8000',
-    'webspec70.mi.hdm-stuttgart.de'
+    '*'
 ]
 
 
@@ -54,7 +53,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'Backend.urls'
+ROOT_URLCONF = 'backend.urls'
 
 TEMPLATES = [
     {
@@ -73,7 +72,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'Backend.wsgi.application'
+WSGI_APPLICATION = 'backend.wsgi.application'
 
 
 # Database
