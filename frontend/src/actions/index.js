@@ -1,4 +1,4 @@
-export const changeLanguage = lang => ({
+export const changeLanguage = language => ({
   type: 'CHANGE_LANG',
-  lang,
+  language,
 })

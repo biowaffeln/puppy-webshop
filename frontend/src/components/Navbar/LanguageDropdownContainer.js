@@ -3,7 +3,7 @@ import LanguageDropdown from './LanguageDropdown'
 import { changeLanguage } from '../../actions'
 
 const mapDispatchToProps = dispatch => ({
-  changeLang: lang => dispatch(changeLanguage(lang))
+  changeLanguage: language => dispatch(changeLanguage(language))
 })
 
 export default connect(

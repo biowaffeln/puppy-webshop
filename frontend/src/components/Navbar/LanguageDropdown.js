@@ -1,5 +1,5 @@
 import React from 'react'
-import { Languages } from '../../reducers/lang'
+import { Languages } from '../../reducers/language'
 import {
   UncontrolledDropdown,
   DropdownToggle,
@@ -8,16 +8,16 @@ import {
 } from 'reactstrap'
 import './dropdown.scss'
 
-const LanguageDropdown = ({ label, changeLang }) =>
+const LanguageDropdown = ({ label, changeLanguage }) =>
   <UncontrolledDropdown nav inNavbar>
     <DropdownToggle nav caret>
       {label}
     </DropdownToggle>
     <DropdownMenu right>
-      <DropdownItem className='dropdown-button' onClick={() => changeLang(Languages.GERMAN)}>
+      <DropdownItem className='dropdown-button' onClick={() => changeLanguage(Languages.GERMAN)}>
         <img className='dropdown-image' alt='german' src='https://lipis.github.io/flag-icon-css/flags/4x3/de.svg' />
       </DropdownItem>
-      <DropdownItem className='dropdown-button' onClick={() => changeLang(Languages.ENGLISH)}>
+      <DropdownItem className='dropdown-button' onClick={() => changeLanguage(Languages.ENGLISH)}>
         <img className='dropdown-image' alt='english' src='https://lipis.github.io/flag-icon-css/flags/4x3/um.svg' />
       </DropdownItem>
     </DropdownMenu>
