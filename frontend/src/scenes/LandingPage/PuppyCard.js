@@ -4,7 +4,7 @@ import {
   CardTitle, CardSubtitle, Button
 } from 'reactstrap'
 
-const PuppyCard = ({ name, imageUrl, price }) => {
+const PuppyCard = ({ name, imageUrl, price, description }) => {
   return (
     <div>
       <Card className="shadow-sm">
@@ -12,7 +12,7 @@ const PuppyCard = ({ name, imageUrl, price }) => {
         <CardBody>
           <CardTitle>{name}</CardTitle>
           <CardSubtitle>{price} €</CardSubtitle>
-          <CardText>Some quick example text to build on the card title and make up the bulk of the card's content.</CardText>
+          <CardText>{description}</CardText>
           <Button color="primary">Buy!</Button>
         </CardBody>
       </Card>
