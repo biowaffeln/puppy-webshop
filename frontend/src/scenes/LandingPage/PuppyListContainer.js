@@ -10,7 +10,6 @@ class PuppyListContainer extends Component {
 
   async componentDidMount() {
     const puppies = await Api.getAllPuppies()
-    console.log(puppies)
     this.setState({ puppies })
   }
 
