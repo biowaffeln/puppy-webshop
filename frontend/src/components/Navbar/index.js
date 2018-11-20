@@ -7,13 +7,10 @@ import {
   Nav,
   NavItem,
   NavLink,
-  UncontrolledDropdown,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem
 } from 'reactstrap'
 import { Link } from 'react-router-dom'
-import Logo from './Logo'
+import Logo from '../Logo'
+import LanguageDropdownContainer from './LanguageDropdownContainer'
 
 export default class Example extends React.Component {
 
@@ -43,15 +40,7 @@ export default class Example extends React.Component {
               <NavItem>
                 <NavLink tag={Link} to="/cart">Cart</NavLink>
               </NavItem>
-              <UncontrolledDropdown nav inNavbar>
-                <DropdownToggle nav caret>
-                  Language
-                </DropdownToggle>
-                <DropdownMenu right>
-                  <DropdownItem>German</DropdownItem>
-                  <DropdownItem>English</DropdownItem>
-                </DropdownMenu>
-              </UncontrolledDropdown>
+              <LanguageDropdownContainer label='Language' />
             </Nav>
           </Collapse>
         </Navbar>

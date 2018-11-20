@@ -8,9 +8,11 @@
     "react": "^16.6.0",
     "react-dom": "^16.5.2",
     "react-pose": "^3.3.7",
+    "react-redux": "^5.1.1",
     "react-router-dom": "^4.3.1",
     "react-scripts": "2.0.5",
-    "reactstrap": "^6.5.0"
+    "reactstrap": "^6.5.0",
+    "redux": "^4.0.1"
   },
   "scripts": {
     "start": "react-scripts start",
