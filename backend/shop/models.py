@@ -7,7 +7,7 @@ class Puppy(models.Model):
     image_url = models.CharField(max_length=200)
     age = models.IntegerField(null=True)
     weight = models.IntegerField(null=True)
-    description = models.CharField(max_length=500, null=True)
+    description_de = models.CharField(max_length=500, null=True)
     description_en = models.CharField(max_length=500, null=True)
 
     def __str__(self):

@@ -13,7 +13,10 @@ def puppies(request, puppy_id):
         'name': puppy.name,
         'price': puppy.price,
         'imageUrl': puppy.image_url,
-        'description': puppy.description,
+            'description': {
+                'DE': puppies.description_de,
+                'EN': puppies.description_en
+            },
         })
     except Puppy.DoesNotExist:
         raise Http404("No Puppy with this id found")
@@ -25,6 +28,9 @@ def all_puppies(request):
     'name': puppy.name,
     'price': puppy.price,
     'imageUrl': puppy.image_url,
-    'description': puppy.description,
+    'description': {
+        'DE': puppies.description_de,
+        'EN': puppies.description_en
+    },
     } for puppy in puppies]
   return JsonResponse(data, safe=False)
