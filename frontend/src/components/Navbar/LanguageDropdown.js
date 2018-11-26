@@ -14,10 +14,10 @@ const LanguageDropdown = ({ label, changeLanguage }) =>
       {label}
     </DropdownToggle>
     <DropdownMenu right>
-      <DropdownItem className='dropdown-button' onClick={() => changeLanguage(Languages.GERMAN)}>
+      <DropdownItem className='dropdown-button' onClick={() => changeLanguage(Languages.DE)}>
         <img className='dropdown-image' alt='german' src='https://lipis.github.io/flag-icon-css/flags/4x3/de.svg' />
       </DropdownItem>
-      <DropdownItem className='dropdown-button' onClick={() => changeLanguage(Languages.ENGLISH)}>
+      <DropdownItem className='dropdown-button' onClick={() => changeLanguage(Languages.EN)}>
         <img className='dropdown-image' alt='english' src='https://lipis.github.io/flag-icon-css/flags/4x3/um.svg' />
       </DropdownItem>
     </DropdownMenu>
