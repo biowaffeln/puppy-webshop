@@ -1,4 +1,6 @@
 import React from 'react'
+import { connect } from 'react-redux'
+import t from '../../services/translation.service'
 import {
   Collapse,
   Navbar,
@@ -12,7 +14,7 @@ import { Link } from 'react-router-dom'
 import Logo from '../Logo'
 import LanguageDropdownContainer from './LanguageDropdownContainer'
 
-export default class Example extends React.Component {
+class NavbarComponent extends React.Component {
 
   state = {
     isOpen: false
@@ -25,22 +27,25 @@ export default class Example extends React.Component {
   }
 
   render() {
+
+    const { language } = this.props
+
     return (
       <div>
         <Navbar dark color="primary" expand="sm" className="p-3 shadow">
           <NavbarBrand tag={Link} to="/">
-          <Logo /> 
+            <Logo />
           </NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
               <NavItem>
-                <NavLink tag={Link} to="/login">Login</NavLink>
+                <NavLink tag={Link} to="/login">{t[language].login}</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink tag={Link} to="/cart">Cart</NavLink>
+                <NavLink tag={Link} to="/cart">{t[language].cart}</NavLink>
               </NavItem>
-              <LanguageDropdownContainer label='Language' />
+              <LanguageDropdownContainer label={t[language].language} />
             </Nav>
           </Collapse>
         </Navbar>
@@ -48,3 +53,11 @@ export default class Example extends React.Component {
     )
   }
 }
+
+const mapStateToProps = state => ({
+  language: state.language
+})
+
+export default connect(
+  mapStateToProps
+)(NavbarComponent)
