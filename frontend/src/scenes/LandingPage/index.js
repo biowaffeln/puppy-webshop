@@ -1,4 +1,6 @@
 import React from 'react'
+import { connect } from 'react-redux'
+import t from '../../services/translation.service'
 import {
   Container,
   Jumbotron,
@@ -11,15 +13,20 @@ const LandingPage = () =>
   <div>
     <Jumbotron className="text-center" id="landingpage-jumbotron">
       <Container>
-        <h1 className="jumbotron-heading mb-3">Buy cute puppies</h1>
+        <h1 className="jumbotron-heading mb-3">{t['DE'].landingPageHeader}</h1>
         <p className="lead text-muted">
-          This is a very good place to do this,
-          and surely buying cute puppies on the internet isn't illegal.
+          {t['DE'].landingPageContent}
         </p>
-        <Button outline color="primary">Let's do this!</Button>
+        <Button outline color="primary">{t['DE'].landingPageButtonText}</Button>
       </Container>
     </Jumbotron>
     <PuppyListContainer />
   </div>
 
-export default LandingPage
+const mapStateToProps = state => ({
+  language: state.language
+})
+
+export default connect(
+  mapStateToProps
+)(LandingPage)

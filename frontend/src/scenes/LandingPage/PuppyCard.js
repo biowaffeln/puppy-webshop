@@ -1,4 +1,6 @@
 import React from 'react'
+import { connect } from 'react-redux'
+import t from '../../services/translation.service'
 import {
   Card, CardImg, CardText, CardBody,
   CardTitle, CardSubtitle, Button
@@ -12,7 +14,7 @@ const PuppyCard = ({ name, imageUrl, price, description }) => {
         <CardBody>
           <CardTitle>{name}</CardTitle>
           <CardSubtitle>{price} €</CardSubtitle>
-          <CardText>{description}</CardText>
+          <CardText>{description['DE']}</CardText>
           <Button color="primary">Buy!</Button>
         </CardBody>
       </Card>
@@ -20,4 +22,10 @@ const PuppyCard = ({ name, imageUrl, price, description }) => {
   )
 }
 
-export default PuppyCard
+const mapStateToProps = state => ({
+  language: state.language
+})
+
+export default connect(
+  mapStateToProps
+)(PuppyCard)
