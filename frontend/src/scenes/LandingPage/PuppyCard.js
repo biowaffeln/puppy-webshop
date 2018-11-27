@@ -1,5 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
+import t from '../../services/translation.service'
 import {
   Card, CardImg, CardText, CardBody,
   CardTitle, CardSubtitle, Button
@@ -14,7 +15,7 @@ const PuppyCard = ({ name, imageUrl, price, description, language }) => {
           <CardTitle>{name}</CardTitle>
           <CardSubtitle>{price} €</CardSubtitle>
           <CardText>{description[language]}</CardText>
-          <Button color="primary">Buy!</Button>
+          <Button color="primary">{t[language].puppyButtonBuy}</Button>
         </CardBody>
       </Card>
     </div>
