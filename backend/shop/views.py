@@ -48,7 +48,7 @@ def current_user(request):
     Ermittelt den aktuellen User anhand seines Tokens und gibt seine Daten zurück
     """
     serializer = UserSerializer(request.user)
-    return response(serializer.data)
+    return Response(serializer.data)
 
 
 class UserList(APIView):
