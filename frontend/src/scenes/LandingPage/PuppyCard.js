@@ -1,12 +1,11 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import t from '../../services/translation.service'
 import {
   Card, CardImg, CardText, CardBody,
   CardTitle, CardSubtitle, Button
 } from 'reactstrap'
 
-const PuppyCard = ({ name, imageUrl, price, description }) => {
+const PuppyCard = ({ name, imageUrl, price, description, language }) => {
   return (
     <div>
       <Card className="shadow-sm">
@@ -14,7 +13,7 @@ const PuppyCard = ({ name, imageUrl, price, description }) => {
         <CardBody>
           <CardTitle>{name}</CardTitle>
           <CardSubtitle>{price} €</CardSubtitle>
-          <CardText>{description['DE']}</CardText>
+          <CardText>{description[language]}</CardText>
           <Button color="primary">Buy!</Button>
         </CardBody>
       </Card>

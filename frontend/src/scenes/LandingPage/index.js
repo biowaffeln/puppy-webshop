@@ -9,15 +9,15 @@ import {
 import PuppyListContainer from './PuppyListContainer'
 import './styles.scss'
 
-const LandingPage = () =>
+const LandingPage = ({ language }) =>
   <div>
     <Jumbotron className="text-center" id="landingpage-jumbotron">
       <Container>
-        <h1 className="jumbotron-heading mb-3">{t['DE'].landingPageHeader}</h1>
+        <h1 className="jumbotron-heading mb-3">{t[language].landingPageHeader}</h1>
         <p className="lead text-muted">
-          {t['DE'].landingPageContent}
+          {t[language].landingPageContent}
         </p>
-        <Button outline color="primary">{t['DE'].landingPageButtonText}</Button>
+        <Button outline color="primary">{t[language].landingPageButtonText}</Button>
       </Container>
     </Jumbotron>
     <PuppyListContainer />
