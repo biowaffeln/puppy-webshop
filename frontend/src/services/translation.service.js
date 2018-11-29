@@ -1,6 +1,7 @@
 const translations = {
   DE: {
     login: 'einloggen',
+    logout: 'ausloggen',
     cart: 'Einkaufswagen',
     language: 'Sprache',
     landingPageHeader: 'Kaufen sie süße Welpen!',
@@ -10,6 +11,7 @@ const translations = {
   },
   EN: {
     login: 'login',
+    logout: 'logout',
     cart: 'cart',
     language: 'language',
     landingPageHeader: 'Buy cute puppies!',

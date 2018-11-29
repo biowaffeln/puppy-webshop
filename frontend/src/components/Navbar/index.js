@@ -1,63 +1,22 @@
-import React from 'react'
+import { logout } from '../../actions'
+import Navbar from './Navbar'
+import { compose } from 'redux'
 import { connect } from 'react-redux'
-import t from '../../services/translation.service'
-import {
-  Collapse,
-  Navbar,
-  NavbarToggler,
-  NavbarBrand,
-  Nav,
-  NavItem,
-  NavLink,
-} from 'reactstrap'
-import { Link } from 'react-router-dom'
-import Logo from '../Logo'
-import LanguageDropdownContainer from './LanguageDropdownContainer'
-
-class NavbarComponent extends React.Component {
-
-  state = {
-    isOpen: false
-  }
-
-  toggle = () => {
-    this.setState(({ isOpen }) => ({
-      isOpen: !isOpen
-    }))
-  }
-
-  render() {
-
-    const { language } = this.props
-
-    return (
-      <div>
-        <Navbar dark color="primary" expand="sm" className="p-3 shadow">
-          <NavbarBrand tag={Link} to="/">
-            <Logo />
-          </NavbarBrand>
-          <NavbarToggler onClick={this.toggle} />
-          <Collapse isOpen={this.state.isOpen} navbar>
-            <Nav className="ml-auto" navbar>
-              <NavItem>
-                <NavLink tag={Link} to="/login">{t[language].login}</NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink tag={Link} to="/cart">{t[language].cart}</NavLink>
-              </NavItem>
-              <LanguageDropdownContainer label={t[language].language} />
-            </Nav>
-          </Collapse>
-        </Navbar>
-      </div>
-    )
-  }
-}
+import { withRouter } from 'react-router'
 
 const mapStateToProps = state => ({
-  language: state.language
+  language: state.language,
+  isLoggedIn: !!state.auth.data,
 })
 
-export default connect(
-  mapStateToProps
-)(NavbarComponent)
+const mapDispatchToProps = dispatch => ({
+  logout: () => dispatch(logout())
+})
+
+export default compose(
+  withRouter,
+  connect(
+    mapStateToProps,
+    mapDispatchToProps
+  )
+)(Navbar)
