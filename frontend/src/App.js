@@ -1,14 +1,15 @@
 import React from 'react'
 import Navbar from './components/Navbar'
-import { BrowserRouter as Router } from 'react-router-dom'
 import Routes from './routes'
+import { ConnectedRouter } from 'connected-react-router'
+import { history } from './store'
 
 const App = () =>
-  <Router>
+  <ConnectedRouter history={history} >
     <>
       <Navbar />
       <Routes />
     </>
-  </Router>
+  </ConnectedRouter>
 
 export default App
