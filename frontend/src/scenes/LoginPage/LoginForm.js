@@ -1,11 +1,16 @@
 import React from 'react'
-import { Form, FormGroup, Label, Input, Container, Button } from 'reactstrap'
+import {
+  Form, FormGroup, Label, Input, Container,
+  Button,
+  Alert
+} from 'reactstrap'
 
 class LoginForm extends React.Component {
 
   state = {
     email: '',
-    password: ''
+    password: '',
+    errors: ''
   }
 
   handleChange = e => {
@@ -16,8 +21,12 @@ class LoginForm extends React.Component {
   handleSubmit = async (e) => {
     e.preventDefault()
     const data = await this.props.onSubmit(this.state)
-    if(data.token) {
-      this.props.history.push('/') 
+    if (data.token) {
+      this.props.history.push('/')
+    } else {
+      this.setState({
+        errors: data.non_field_errors
+      })
     }
   }
 
@@ -33,14 +42,17 @@ class LoginForm extends React.Component {
           <div className="col col-lg-6">
             <Form>
               <FormGroup>
-                <Label for="username">Email</Label>
+                <Label for="username">Username</Label>
                 <Input type="username" name="username" onChange={this.handleChange} />
               </FormGroup>
               <FormGroup>
                 <Label for="password">Password</Label>
                 <Input type="password" name="password" onChange={this.handleChange} />
               </FormGroup>
-              <Button color="primary" onClick={this.handleSubmit}>Submit</Button>
+              {this.state.errors && <Alert color="danger">
+                {this.state.errors}
+              </Alert>}
+              <Button color="primary" onClick={this.handleSubmit} disabled={disabled(this.state)}>Submit</Button>
             </Form>
           </div>
         </div>
@@ -48,5 +60,7 @@ class LoginForm extends React.Component {
     )
   }
 }
+
+const disabled = ({ username, password }) => username === '' || password === ''
 
 export default LoginForm
