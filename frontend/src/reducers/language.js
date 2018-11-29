@@ -3,7 +3,7 @@ export const Languages = {
   EN: 'EN',
 }
 
-const language = (state = Languages.DE, action) => {
+const language = (state = Languages.EN, action) => {
   switch (action.type) {
     case 'CHANGE_LANG':
       return action.language
