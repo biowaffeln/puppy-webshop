@@ -10,7 +10,7 @@ export const history = createBrowserHistory()
 const persistConfig = {
   key: 'redux',
   storage,
-  whitelist: ['language', 'auth']
+  whitelist: ['language']
 }
 
 export const store = createStore(
