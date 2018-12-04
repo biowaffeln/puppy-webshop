@@ -3,6 +3,7 @@ import { Switch, Route } from 'react-router-dom'
 import LandingPage from '../scenes/LandingPage'
 import LoginPage from '../scenes/LoginPage'
 import CartPage from '../scenes/CartPage'
+import DetailsPage from '../scenes/DetailsPage'
 import { PublicRoute } from './protectedRoutes'
 
 const Routes = () =>
@@ -10,6 +11,7 @@ const Routes = () =>
     <Route exact path="/" component={LandingPage} />
     <PublicRoute path="/login" component={LoginPage} />
     <Route path="/cart" component={CartPage} />
+    <Route path="/puppies/:id" component={DetailsPage} />
   </Switch>
 
 export default Routes

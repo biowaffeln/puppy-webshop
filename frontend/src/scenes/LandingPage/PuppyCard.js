@@ -1,16 +1,19 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import t from '../../services/translation.service'
+import { Link } from 'react-router-dom'
 import {
   Card, CardImg, CardText, CardBody,
   CardTitle, CardSubtitle, Button
 } from 'reactstrap'
 
-const PuppyCard = ({ name, imageUrl, price, description, language }) => {
+const PuppyCard = ({ id, name, imageUrl, price, description, language }) => {
   return (
     <div>
       <Card className="shadow-sm">
-        <CardImg top width="100%" src={imageUrl} alt="Puppy Image" />
+        <Link to={`/puppies/${id}`} >
+          <CardImg top width="100%" src={imageUrl} alt="Puppy Image" />
+        </Link>
         <CardBody>
           <CardTitle>{name}</CardTitle>
           <CardSubtitle>{price} €</CardSubtitle>
