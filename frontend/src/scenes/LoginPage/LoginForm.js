@@ -23,9 +23,9 @@ class LoginForm extends React.Component {
     const data = await this.props.onSubmit(this.state)
     if (data.token) {
       this.props.history.push('/')
-    } else {
+    } else if (data.errors) {
       this.setState({
-        errors: data.non_field_errors
+        errors: data.errors
       })
     }
   }
@@ -61,6 +61,6 @@ class LoginForm extends React.Component {
   }
 }
 
-const disabled = ({ username, password }) => username === '' || password === ''
+const disabled = ({ username, password }) => /^[\s]*$/.test(username) || /^[\s]*$/.test(password)
 
 export default LoginForm
