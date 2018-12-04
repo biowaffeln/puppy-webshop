@@ -1,7 +1,7 @@
 const translations = {
   DE: {
-    login: 'einloggen',
-    logout: 'ausloggen',
+    login: 'login',
+    logout: 'logout',
     cart: 'Einkaufswagen',
     language: 'Sprache',
     landingPageHeader: 'Kaufen sie süße Welpen!',
