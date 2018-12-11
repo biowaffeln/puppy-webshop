@@ -5,8 +5,10 @@ import {
   Card, CardImg, CardText, CardBody,
   CardTitle, CardSubtitle, Button
 } from 'reactstrap'
+import { addPuppy, removePuppy } from '../../actions'
 
-const PuppyCard = ({ name, imageUrl, price, description, language }) => {
+const PuppyCard = ({ puppy, language, addPuppy, removePuppy, isInCart }) => {
+  const { name, imageUrl, price, description } = puppy
   return (
     <div>
       <Card className="shadow-sm">
@@ -15,7 +17,15 @@ const PuppyCard = ({ name, imageUrl, price, description, language }) => {
           <CardTitle>{name}</CardTitle>
           <CardSubtitle>{price} €</CardSubtitle>
           <CardText>{description[language]}</CardText>
-          <Button color="primary">{t[language].puppyButtonBuy}</Button>
+          {
+            isInCart(puppy.id)
+              ? <Button outline color="primary" onClick={() => removePuppy(puppy.id)}>
+                {t[language].puppyButtonAdded}
+              </Button>
+              : <Button color="primary" onClick={() => addPuppy(puppy)}>
+                {t[language].puppyButtonBuy}
+              </Button>
+          }
         </CardBody>
       </Card>
     </div>
@@ -23,9 +33,17 @@ const PuppyCard = ({ name, imageUrl, price, description, language }) => {
 }
 
 const mapStateToProps = state => ({
-  language: state.language
+  language: state.language,
+  cart: state.cart,
+  isInCart: id => state.cart.some(puppy => puppy.id === id)
+})
+
+const mapDispatchToProps = dispatch => ({
+  addPuppy: puppy => dispatch(addPuppy(puppy)),
+  removePuppy: id => dispatch(removePuppy(id))
 })
 
 export default connect(
-  mapStateToProps
+  mapStateToProps,
+  mapDispatchToProps
 )(PuppyCard)

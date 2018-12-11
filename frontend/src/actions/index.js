@@ -25,3 +25,13 @@ export const login = formState => async (dispatch) => {
 export const logout = () => ({
   type: 'LOGOUT'
 })
+
+export const addPuppy = puppy => ({
+  type: 'ADD_PUPPY',
+  puppy
+})
+
+export const removePuppy = id => ({
+  type: 'REMOVE_PUPPY',
+  id
+})
