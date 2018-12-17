@@ -10,7 +10,7 @@ export const history = createBrowserHistory()
 const persistConfig = {
   key: 'redux',
   storage,
-  whitelist: ['language', 'auth']
+  whitelist: ['language', 'auth', 'cart']
 }
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose

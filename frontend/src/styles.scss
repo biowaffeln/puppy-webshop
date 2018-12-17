@@ -5,3 +5,17 @@ $primary: #e64c6d;
 body {
   background: #f4f4f4;
 }
+
+.shadow-blurred {
+  box-shadow: 1px 3px 20px rgba(0, 0, 0, 0.06) !important;
+}
+
+.shadow {
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15) !important;
+}
+
+.card {
+  border: none !important;
+}
+
+

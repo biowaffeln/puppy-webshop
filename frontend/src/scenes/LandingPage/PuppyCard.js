@@ -11,7 +11,7 @@ const PuppyCard = ({ puppy, language, addPuppy, removePuppy, isInCart }) => {
   const { name, imageUrl, price, description } = puppy
   return (
     <div>
-      <Card className="shadow-sm">
+      <Card className="shadow-blurred">
         <CardImg top width="100%" src={imageUrl} alt="Puppy Image" />
         <CardBody>
           <CardTitle>{name}</CardTitle>
