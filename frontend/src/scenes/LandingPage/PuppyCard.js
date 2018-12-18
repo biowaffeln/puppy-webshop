@@ -34,8 +34,7 @@ const PuppyCard = ({ puppy, language, addPuppy, removePuppy, isInCart }) => {
 
 const mapStateToProps = state => ({
   language: state.language,
-  cart: state.cart,
-  isInCart: id => state.cart.some(puppy => puppy.id === id)
+  isInCart: id => !!state.cart[id]
 })
 
 const mapDispatchToProps = dispatch => ({

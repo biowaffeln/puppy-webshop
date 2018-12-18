@@ -1,10 +1,26 @@
-const cart = (state = [], action) => {
+const cart = (state = {}, action) => {
   switch (action.type) {
     case 'ADD_PUPPY':
-      return [...state, action.puppy]
+      return {
+        ...state, [action.puppy.id]: {
+          puppy: action.puppy,
+          amount: 1
+        }
+      }
 
     case 'REMOVE_PUPPY':
-      return state.filter(puppy => puppy.id !== action.id)
+      const newState = { ...state }
+      delete newState[action.id]
+      return newState
+
+    case 'UPDATE_PUPPY_AMOUNT':
+      return {
+        ...state, [action.id]:
+        {
+          ...state[action.id],
+          amount: action.amount
+        }
+      }
 
     case 'CLEAR_ALL':
       return []
