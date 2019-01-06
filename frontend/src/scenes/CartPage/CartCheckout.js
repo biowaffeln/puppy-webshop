@@ -10,7 +10,7 @@ const total = puppies =>
 const CartCheckout = ({ puppies }) =>
   <>
     {puppies.map(p =>
-      <p>
+      <p key={p.puppy.id}>
         <span>{p.puppy.name} </span>
         <span>{p.amount} x {p.puppy.price} €</span>
       </p>
