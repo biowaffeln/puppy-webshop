@@ -11,14 +11,19 @@ const CartCheckout = ({ puppies }) =>
   <>
     {puppies.map(p =>
       <p key={p.puppy.id}>
-        <span>{p.puppy.name} </span>
-        <span>{p.amount} x {p.puppy.price} €</span>
+        <span className="font-weight-bold">{p.puppy.name} </span>
+        <span className="float-right">{p.amount} x {p.puppy.price} €</span>
       </p>
     )}
     <hr />
-    <p>total: {total(puppies)} €</p>
-    <Button color="primary" className="mr-3">Buy Items!</Button>
-    <Button color="primary" outline>Continue Shopping</Button>
+    <p className="pb-4" style={{ fontSize: '1.3em' }}>
+      <span>total: </span>
+      <span className="float-right">{total(puppies)} € </span>
+    </p>
+    <div className="d-flex justify-content-end mb-4">
+      <Button color="primary" className="mr-3">Buy Items!</Button>
+      <Button color="primary" outline>Continue Shopping</Button>
+    </div>
   </>
 
 const mapStateToProps = (state) => ({
