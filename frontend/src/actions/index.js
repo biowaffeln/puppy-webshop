@@ -41,5 +41,3 @@ export const updatePuppyAmount = (id, amount) => ({
   id,
   amount: Math.max(1, Math.min(amount, 10))
 })
-
-

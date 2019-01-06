@@ -14,7 +14,7 @@ const CartItem = ({ puppy }) =>
       <p className="text-secondary mb-0">{puppy.description['DE']}</p>
     </Col>
     <Col xs={4} md={3} >
-      <p className="font-weight-bold mb-0 mt-3">{puppy.price} $</p>
+      <p className="font-weight-bold mb-0 mt-3">{puppy.price} €</p>
     </Col>
     <Col xs={12} md={4}>
       <p className="mb-0 mt-3">

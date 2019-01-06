@@ -1,6 +1,7 @@
 import React from 'react'
 import CartItem from './CartItem'
-import { Container, Row, Col, Button } from 'reactstrap'
+import { Container, Row, Col } from 'reactstrap'
+import CartCheckout from './CartCheckout'
 
 const CartPage = ({ cart }) =>
   <Container>
@@ -18,8 +19,7 @@ const CartPage = ({ cart }) =>
         )}
       </Col>
       <Col className="mt-4" sm={12} lg={4}>
-        <Button color="primary" className="mr-3">Buy Items!</Button>
-        <Button color="primary" outline>Continue Shopping</Button>
+        <CartCheckout />
       </Col>
     </Row>
   </Container>
