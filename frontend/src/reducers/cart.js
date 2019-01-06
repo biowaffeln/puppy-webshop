@@ -22,6 +22,7 @@ const cart = (state = {}, action) => {
         }
       }
 
+    case 'LOGOUT':
     case 'CLEAR_ALL':
       return []
 
