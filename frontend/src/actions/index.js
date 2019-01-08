@@ -25,3 +25,19 @@ export const login = formState => async (dispatch) => {
 export const logout = () => ({
   type: 'LOGOUT'
 })
+
+export const addPuppy = puppy => ({
+  type: 'ADD_PUPPY',
+  puppy
+})
+
+export const removePuppy = id => ({
+  type: 'REMOVE_PUPPY',
+  id
+})
+
+export const updatePuppyAmount = (id, amount) => ({
+  type: 'UPDATE_PUPPY_AMOUNT',
+  id,
+  amount: Math.max(1, Math.min(amount, 10))
+})
