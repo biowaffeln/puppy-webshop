@@ -1,6 +1,7 @@
 from django.db import models
 from django.conf import settings
 
+
 class Puppy(models.Model):
     name = models.CharField(max_length=30)
     price = models.DecimalField(max_digits=6, decimal_places=2)
@@ -13,11 +14,20 @@ class Puppy(models.Model):
     def __str__(self):
         return self.name
 
+
 class Order(models.Model):
     total_price = models.DecimalField(max_digits=9, decimal_places=2)
     puppies = models.ManyToManyField(Puppy)
     date = models.DateTimeField()
-    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
+    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name='orders')
+
+    def save(self, *args, **kwargs):
+        """
+        Create a new Order
+        """
+        # TODO: Code to check order here? Calculate total_price here!
+        print("An order is being saved: " + str(Order.id))
+        super(Order, self).save(*args, **kwargs)
 
     def __str__(self):
         return str(self.id)

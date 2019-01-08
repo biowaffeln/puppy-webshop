@@ -1,14 +1,15 @@
 from django.urls import path
+from .views import current_user, UserList, UserDetail, OrderList, OrderDetail, PuppyList, PuppyDetail, api_root
+from rest_framework.urlpatterns import format_suffix_patterns
 
-from . import views
-from django.urls import path
-from .views import current_user, UserList
 
-urlpatterns = [
-    path('', views.index, name='index'),
-    path('puppies/<int:puppy_id>/', views.puppies, name='puppies'),
-    path('puppies/all', views.all_puppies, name='all_puppies'),
+urlpatterns = format_suffix_patterns([
+    path('', api_root),
+    path('puppies/', PuppyList.as_view(), name='puppy-list'),
+    path('puppies/<int:pk>/', PuppyDetail.as_view(), name='puppy-detail'),
     path('current_user/', current_user),
-    path('users/', UserList.as_view())
-
-]
+    path('users/', UserList.as_view(), name='user-list'),
+    path('users/<int:pk>/', UserDetail.as_view(), name='user-detail'),
+    path('orders/', OrderList.as_view(), name='order-list'),
+    path('orders/<int:pk>', OrderDetail.as_view(), name='order-detail'),
+])

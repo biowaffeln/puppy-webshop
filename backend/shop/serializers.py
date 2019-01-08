@@ -1,13 +1,15 @@
 from rest_framework import serializers
 from rest_framework_jwt.settings import api_settings
 from django.contrib.auth.models import User
+from .models import Order, Puppy
 
 
 class UserSerializer(serializers.ModelSerializer):
+    orders = serializers.PrimaryKeyRelatedField(many=True, read_only=True)
 
     class Meta:
         model = User
-        fields = ('username',)
+        fields = ('id', 'username', 'orders')
 
 
 class UserSerializerWithToken(serializers.ModelSerializer):
@@ -34,3 +36,23 @@ class UserSerializerWithToken(serializers.ModelSerializer):
     class Meta:
         model = User
         fields = ('token', 'username', 'password')
+
+
+class PuppySerializer(serializers.ModelSerializer):
+    description = serializers.SerializerMethodField()
+
+    def get_description(self, puppy):
+        return {'DE': puppy.description_de, 'EN': puppy.description_en}
+
+    class Meta:
+        model = Puppy
+        fields = ('id', 'name', 'price', 'image_url', 'age', 'weight', 'description')
+
+
+class OrderSerializer(serializers.ModelSerializer):
+    user = serializers.ReadOnlyField(source='user.username')
+    puppies = serializers.PrimaryKeyRelatedField(many=True, read_only=True)
+
+    class Meta:
+        model = Order
+        fields = ('id', 'total_price', 'puppies', 'date', 'user')

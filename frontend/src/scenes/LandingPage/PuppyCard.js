@@ -6,11 +6,11 @@ import {
   CardTitle, CardSubtitle, Button
 } from 'reactstrap'
 
-const PuppyCard = ({ name, imageUrl, price, description, language }) => {
+const PuppyCard = ({ name, image_url, price, description, language }) => {
   return (
     <div>
       <Card className="shadow-sm">
-        <CardImg top width="100%" src={imageUrl} alt="Puppy Image" />
+        <CardImg top width="100%" src={image_url} alt="Puppy Image" />
         <CardBody>
           <CardTitle>{name}</CardTitle>
           <CardSubtitle>{price} €</CardSubtitle>
