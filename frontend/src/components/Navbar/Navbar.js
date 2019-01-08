@@ -36,7 +36,7 @@ class NavbarComponent extends React.Component {
 
     return (
       <div>
-        <Navbar dark color="primary" expand="sm" className="p-3 shadow">
+        <Navbar dark color="primary" expand="sm" className="p-2 shadow">
           <NavbarBrand tag={Link} to="/">
             <Logo />
           </NavbarBrand>
