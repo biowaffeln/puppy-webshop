@@ -43,7 +43,8 @@ class UserTest(TestCase):
     als nicht eingeloggter Nutzer zurückbekommen sollte"""
 class httpRequestTest(APITestCase):
     def test_url_root(self):
+
         factory = APIRequestFactory()
         response = factory.get('/token-auth')
-        self.assertFalse(response.st, status.HTTP_200_OK)
+        self.assertNotEqual(response, status.HTTP_200_OK)
 
