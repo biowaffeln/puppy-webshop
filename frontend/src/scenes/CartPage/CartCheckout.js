@@ -1,6 +1,7 @@
 import React from 'react'
 import { Button } from 'reactstrap'
 import { connect } from 'react-redux'
+import { Link } from 'react-router-dom'
 
 const total = puppies =>
   puppies
@@ -21,8 +22,8 @@ const CartCheckout = ({ puppies }) =>
       <span className="float-right">{total(puppies)} € </span>
     </p>
     <div className="d-flex justify-content-end mb-4">
-      <Button color="primary" className="mr-3">Buy Items!</Button>
-      <Button color="primary" outline>Continue Shopping</Button>
+      <Button color="primary" className="mr-3" tag={Link} to="checkout">Buy Items!</Button>
+      <Button color="primary" outline tag={Link} to="/">Continue Shopping</Button>
     </div>
   </>
 
