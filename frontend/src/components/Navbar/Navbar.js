@@ -47,11 +47,11 @@ class NavbarComponent extends React.Component {
                 {
                   isLoggedIn
                     ? <NavLink onClick={this.handleLogout}>{t[language].logout}</NavLink>
-                    : <NavLink tag={Link} to="/login">{t[language].login}</NavLink>
+                    : <NavLink tag={Link} to="login">{t[language].login}</NavLink>
                 }
               </NavItem>
               <NavItem>
-                <NavLink tag={Link} to="/cart">{t[language].cart}</NavLink>
+                <NavLink tag={Link} to="cart">{t[language].cart}</NavLink>
               </NavItem>
               <LanguageDropdownContainer label={t[language].language} />
             </Nav>
