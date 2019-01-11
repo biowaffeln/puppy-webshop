@@ -53,6 +53,9 @@ class NavbarComponent extends React.Component {
               <NavItem>
                 <NavLink tag={Link} to="cart">{t[language].cart}</NavLink>
               </NavItem>
+              <NavItem>
+                <NavLink tag={Link} to="orders">{t[language].orderList}</NavLink>
+              </NavItem>
               <LanguageDropdownContainer label={t[language].language} />
             </Nav>
           </Collapse>

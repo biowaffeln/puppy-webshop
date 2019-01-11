@@ -1,5 +1,8 @@
 from django.db import models
 from django.conf import settings
+from django.contrib.auth.models import User
+from django.db.models.signals import post_save
+from django.dispatch import receiver
 
 
 class Puppy(models.Model):
@@ -31,3 +34,20 @@ class Order(models.Model):
 
     def __str__(self):
         return str(self.id)
+
+
+class Address(models.Model):
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    country = models.CharField(max_length=30, blank=True)
+    street = models.CharField(max_length=30, blank=True)
+    zip = models.CharField(max_length=10, blank=True)
+    city = models.CharField(max_length=30, blank=True)
+
+@receiver(post_save, sender=User)
+def create_user_address(sender, instance, created, **kwargs):
+    if created:
+        Address.objects.create(user=instance)
+
+@receiver(post_save, sender=User)
+def save_user_address(sender, instance, **kwargs):
+    instance.address.save()

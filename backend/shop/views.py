@@ -50,8 +50,8 @@ class OrderList(generics.ListCreateAPIView):
     permission_classes = (permissions.IsAuthenticatedOrReadOnly,)
     serializer_class = OrderSerializer
 
-    def get_queryset(self, *args, **kwargs):  # Necessary to filter for orders solely by requesting user!
-        return Order.objects.all().filter(user=self.request.user)  # TODO: error when not logged in, Problem?
+    # def get_queryset(self, *args, **kwargs):  # Necessary to filter for orders solely by requesting user!
+    #     return Order.objects.all().filter(user=self.request.user)  # TODO: error when not logged in, Problem?
 
     def perform_create(self, serializer):
         serializer.save(user=self.request.user)
@@ -64,22 +64,24 @@ class OrderDetail(generics.RetrieveUpdateDestroyAPIView):
 
 
 class UserList(generics.ListAPIView):
-    queryset = User.objects.all()
+    queryset = User.objects.all().select_related('address')
     serializer_class = UserSerializer
 
 
 class UserDetail(generics.RetrieveAPIView):
-    queryset = User.objects.all()
+    queryset = User.objects.all().select_related('address')
     serializer_class = UserSerializer
 
 
 class PuppyList(generics.ListAPIView):
+    http_method_names = ["get"]
     permission_classes = (permissions.IsAuthenticatedOrReadOnly,)
     queryset = Puppy.objects.all()
     serializer_class = PuppySerializer
 
 
 class PuppyDetail(generics.RetrieveAPIView):
+    http_method_names = ["get"]
     permission_classes = (permissions.IsAuthenticatedOrReadOnly,)
     queryset = Puppy.objects.all()
     serializer_class = PuppySerializer

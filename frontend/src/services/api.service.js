@@ -10,8 +10,61 @@ async function getPuppyById(id) {
   const res = await fetch(REACT_APP_BACKEND_URL + `/shop/puppies/${id}`)
   return res.json()
 }
+async function getMyOrders() {
+  const res = await fetch(REACT_APP_BACKEND_URL + `/shop/orders/`)//, {
+    //   method: 'POST',
+    //   headers: {
+    //     "Content-Type": "application/json",
+    //   },
+    //   body: JSON.stringify({ user })
+    // })
+  return res.json()
+}
+async function getMyOrderById(id) {
+  const res = await fetch(REACT_APP_BACKEND_URL + `/shop/orders/${id}`)
+  return res.json()
+}
+
+// async function createOrder() {
+//   const res = await fetch(REACT_APP_BACKEND_URL + `/shop/orders/${id}`){
+//       method: 'POST',
+//       headers: {
+//         "Content-Type": "application/json",
+//       },
+//       body: JSON.stringify({ username, password })
+//     })
+//
+//     return res.status === 400
+//       ? { errors: 'invalid credentials' }
+//       : res.json()
+//
+//   } catch (e) {
+//     return { errors: 'a server error occured' }
+//   }
+//   return res.json()
+// }
+// async function createUser() {
+//   const res = await fetch(REACT_APP_BACKEND_URL + `/shop/orders/${id}`){
+//       method: 'POST',
+//       headers: {
+//         "Content-Type": "application/json",
+//       },
+//       body: JSON.stringify({ username, password })
+//     })
+//
+//     return res.status === 400
+//       ? { errors: 'invalid credentials' }
+//       : res.json()
+//
+//   } catch (e) {
+//     return { errors: 'a server error occured' }
+//   }
+//   return res.json()
+// }
 
 export default {
   getAllPuppies,
-  getPuppyById
+  getPuppyById,
+  getMyOrders,
+  getMyOrderById
 }
