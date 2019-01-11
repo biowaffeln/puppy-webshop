@@ -10,13 +10,13 @@ async function getPuppyById(id) {
   const res = await fetch(REACT_APP_BACKEND_URL + `/shop/puppies/${id}`)
   return res.json()
 }
-async function getMyOrders() {
+async function getMyOrders(auth) {
   const res = await fetch(REACT_APP_BACKEND_URL + `/shop/orders/`)//, {
     //   method: 'POST',
     //   headers: {
     //     "Content-Type": "application/json",
     //   },
-    //   body: JSON.stringify({ user })
+    //   body: JSON.stringify({ auth })
     // })
   return res.json()
 }
