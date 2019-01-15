@@ -11,17 +11,15 @@ async function getPuppyById(id) {
   return res.json()
 }
 async function getMyOrders(auth) {
-  const res = await fetch(REACT_APP_BACKEND_URL + `/shop/orders/`)//, {
-    //   method: 'POST',
-    //   headers: {
-    //     "Content-Type": "application/json",
-    //   },
-    //   body: JSON.stringify({ auth })
-    // })
-  return res.json()
-}
-async function getMyOrderById(id) {
-  const res = await fetch(REACT_APP_BACKEND_URL + `/shop/orders/${id}`)
+  console.log(auth.token)
+  auth = auth.token
+  const res = await fetch(REACT_APP_BACKEND_URL + `/shop/orders/`, {
+      method: 'GET',
+      headers: {
+        "Content-Type": "application/json",
+        "Authorization": "Bearer " +  auth
+      }
+    })
   return res.json()
 }
 
@@ -65,6 +63,5 @@ async function getMyOrderById(id) {
 export default {
   getAllPuppies,
   getPuppyById,
-  getMyOrders,
-  getMyOrderById
+  getMyOrders
 }

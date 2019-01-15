@@ -10,11 +10,7 @@ const OrderCard = ({ order }) => {
   return (
     <div>
       <Card className="shadow-blurred">
-        <CardBody>
-          <CardTitle>{total_price}</CardTitle>
-          <CardSubtitle>{date}</CardSubtitle>
-          <CardText>{user}</CardText>
-        </CardBody>
+        {JSON.stringify(order, null, 4)}
       </Card>
     </div>
   )
