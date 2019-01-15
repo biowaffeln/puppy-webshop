@@ -1,8 +1,6 @@
 import React from 'react'
-import { connect } from 'react-redux'
 import {
-  Card, CardImg, CardText, CardBody,
-  CardTitle, CardSubtitle, Button
+  Card
 } from 'reactstrap'
 
 const OrderCard = ({ order }) => {
