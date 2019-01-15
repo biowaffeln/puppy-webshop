@@ -27,7 +27,7 @@ const PuppyCard = ({ puppy, language, addPuppy, removePuppy, isInCart }) => {
                 {t[language].puppyButtonBuy}
               </Button>
           }
-          <Button tag={Link} to={`puppies/${puppy.id}`} outline color="primary" className="ml-2">show details</Button>
+          <Button tag={Link} to={`puppies/${puppy.id}`} outline color="primary" className="ml-2">{t[language].showDetails}</Button>
         </CardBody>
       </Card>
     </div>

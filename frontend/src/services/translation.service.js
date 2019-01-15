@@ -12,7 +12,9 @@ const translations = {
     orderList: 'Meine Bestellungen',
     notOrderedYet: 'Du hast bisher noch nichts bestellt.',
     backToShopping: 'Zurück zum Einkaufen',
-    emptyCart: 'Dein Einkaufswagen ist leer'
+    emptyCart: 'Dein Einkaufswagen ist leer',
+    goToCart: 'zum Einkaufswagen',
+    showDetails: 'mehr Infos',
   },
   EN: {
     login: 'login',
@@ -27,7 +29,9 @@ const translations = {
     orderList: 'my orders',
     notOrderedYet: 'You have not yet ordered anything.',
     backToShopping: 'Back to shopping',
-    emptyCart: 'Your cart is empty'
+    emptyCart: 'Your cart is empty',
+    goToCart: 'go to cart',
+    showDetails: 'show details',
   },
 }
 
