@@ -1,3 +1,8 @@
+@import url('https://fonts.googleapis.com/css?family=Karla');
+
+*{
+  font-family: 'Karla', sans-serif;
+}
 $primary: #e64c6d;
 
 @import "~bootstrap/scss/bootstrap.scss";
