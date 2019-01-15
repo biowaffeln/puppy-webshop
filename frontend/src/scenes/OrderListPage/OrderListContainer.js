@@ -10,8 +10,13 @@ class OrderListContainer extends Component {
   }
 
   async componentDidMount() {
-    const orders = await Api.getMyOrders(this.props.auth)
-    this.setState({ orders })
+    if(this.props.auth !== null) { // TODO: Überprüfung von Routen auslagern?
+      const orders = await Api.getMyOrders(this.props.auth)
+      this.setState({ orders })
+    } else {
+      const orders = undefined
+      this.setState({ orders })
+    }
   }
 
   render() {

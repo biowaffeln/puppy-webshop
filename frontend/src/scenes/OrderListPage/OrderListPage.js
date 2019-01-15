@@ -8,7 +8,7 @@ import t from '../../services/translation.service'
 
 const OrderListPage = ({ orders, language }) =>
 
-  (orders !== undefined && orders.length === 0)
+  (orders === undefined || orders.length === 0)
 
     ? <Container className="mt-5 d-flex flex-column align-items-center">
       <p style={{ fontSize: '4em' }}><span role="img" aria-label="Dog">🐶</span></p>
