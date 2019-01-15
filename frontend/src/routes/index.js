@@ -14,4 +14,5 @@ const Routes = () =>
     <Route path="/puppies/:id" component={DetailsPage} />
   </Switch>
 
+
 export default Routes

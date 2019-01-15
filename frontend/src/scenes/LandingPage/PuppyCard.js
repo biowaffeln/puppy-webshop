@@ -18,7 +18,7 @@ const PuppyCard = ({ id, name, imageUrl, price, description, language }) => {
           <CardTitle>{name}</CardTitle>
           <CardSubtitle>{price} €</CardSubtitle>
           <CardText>{description[language]}</CardText>
-          <Button color="primary">{t[language].puppyButtonBuy}</Button>
+            <Link to={`/puppies/${id}`}> <Button color="primary">{t[language].puppyButtonBuy}</Button> </Link>
         </CardBody>
       </Card>
     </div>
