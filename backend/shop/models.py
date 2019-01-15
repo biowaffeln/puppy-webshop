@@ -20,7 +20,7 @@ class Puppy(models.Model):
 
 class Order(models.Model):
     total_price = models.DecimalField(max_digits=9, decimal_places=2)
-    puppies = models.ManyToManyField(Puppy)
+    puppies = models.ManyToManyField(Puppy, through='PuppyOrder')
     date = models.DateTimeField()
     user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name='orders')
 
@@ -36,6 +36,15 @@ class Order(models.Model):
         return str(self.id)
 
 
+class PuppyOrder(models.Model):
+    order = models.ForeignKey(Order, on_delete=models.CASCADE, related_name='orders')
+    puppy = models.ForeignKey(Puppy, on_delete=models.CASCADE, related_name='puppies')
+    amount = models.IntegerField()
+
+    def __str__(self):
+        return self.id
+
+
 class Address(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     country = models.CharField(max_length=30, blank=True)
@@ -43,10 +52,12 @@ class Address(models.Model):
     zip = models.CharField(max_length=10, blank=True)
     city = models.CharField(max_length=30, blank=True)
 
+
 @receiver(post_save, sender=User)
 def create_user_address(sender, instance, created, **kwargs):
     if created:
         Address.objects.create(user=instance)
+
 
 @receiver(post_save, sender=User)
 def save_user_address(sender, instance, **kwargs):
