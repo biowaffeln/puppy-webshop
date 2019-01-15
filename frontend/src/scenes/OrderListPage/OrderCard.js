@@ -4,7 +4,6 @@ import {
 } from 'reactstrap'
 
 const OrderCard = ({ order }) => {
-  const { total_price, puppies, date, user } = order
   return (
     <div>
       <Card className="shadow-blurred">
