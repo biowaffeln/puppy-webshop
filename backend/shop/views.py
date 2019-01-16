@@ -10,15 +10,6 @@ from .serializers import UserSerializer, UserSerializerWithToken, OrderSerialize
 from .permissions import IsOwner
 
 
-@api_view(['GET'])
-def current_user(request):
-    """
-    Ermittelt den aktuellen User anhand seines Tokens und gibt seine Daten zurück.
-    """
-    serializer = UserSerializer(request.user)
-    return Response(serializer.data)
-
-
 # class UserList(APIView):
 #     """
 #     Erstellt einen neuen User.
@@ -50,27 +41,14 @@ class OrderList(generics.ListCreateAPIView):
 
     def get_queryset(self):
         token = self.request.META.get('HTTP_AUTHORIZATION', " ").split(' ')[1]
-        data = {'token': token}
-        try:
-            valid_data = VerifyJSONWebTokenSerializer().validate(data)
-            user = valid_data['user']
-            self.request.user = user
-        except ValidationError as v:
-            print("validation error", v)
-        print(self.request.user)
-        if (self.request.user.is_anonymous):
+        self.request.user = get_request_user_from_token(token)
+        if self.request.user.is_anonymous:
             return None
-        return Order.objects.all().filter(user=self.request.user)  # TODO: self.request.user aus Token holen
+        return Order.objects.all().filter(user=self.request.user)
 
     def perform_create(self, serializer):
         token = self.request.META.get('HTTP_AUTHORIZATION', " ").split(' ')[1]
-        data = {'token': token}
-        try:
-            valid_data = VerifyJSONWebTokenSerializer().validate(data)
-            user = valid_data['user']
-            self.request.user = user
-        except ValidationError as v:
-            print("validation error", v)
+        self.reqest.user = get_request_user_from_token(token)
         serializer.save(user=self.request.user)
 
 
@@ -105,3 +83,12 @@ class PuppyDetail(generics.RetrieveAPIView):
     permission_classes = (permissions.AllowAny,)
     queryset = Puppy.objects.all()
     serializer_class = PuppySerializer
+
+
+def get_request_user_from_token(token):
+    data = {'token': token}
+    try:
+        valid_data = VerifyJSONWebTokenSerializer().validate(data)
+        return valid_data['user']
+    except ValidationError as v:
+        print("validation error", v)

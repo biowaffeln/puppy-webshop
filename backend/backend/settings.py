@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/2.1/ref/settings/
 """
 
 import os
+from datetime import timedelta
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -22,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'bx1znfev-xpkjxss0$t@%*rgc_1v(k(74pkd+rb4k4186wqs+)'
 
-# SECURITY WARNING: don't run with debug turned on in production!
+# SECURITY WARNING: don't run with debug turned on in production! TODO: Turn off!
 DEBUG = True
 
 CORS_ORIGIN_ALLOW_ALL = True
@@ -147,5 +148,6 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 JWT_AUTH = {
-    'JWT_RESPONSE_PAYLOAD_HANDLER': 'shop.utils.my_jwt_response_handler'
+    'JWT_RESPONSE_PAYLOAD_HANDLER': 'shop.utils.my_jwt_response_handler',
+    'JWT_EXPIRATION_DELTA': timedelta(days=2),
 }

@@ -37,12 +37,12 @@ class Order(models.Model):
 
 
 class PuppyOrder(models.Model):
-    order = models.ForeignKey(Order, on_delete=models.CASCADE, related_name='orders')
-    puppy = models.ForeignKey(Puppy, on_delete=models.CASCADE, related_name='puppies')
+    order = models.ForeignKey(Order, on_delete=models.CASCADE)
+    puppy = models.ForeignKey(Puppy, on_delete=models.CASCADE)
     amount = models.IntegerField()
 
     def __str__(self):
-        return self.id
+        return str(self.id)
 
 
 class Address(models.Model):

@@ -1,7 +1,7 @@
 from rest_framework import serializers
 from rest_framework_jwt.settings import api_settings
 from django.contrib.auth.models import User
-from .models import Order, Puppy
+from .models import Order, Puppy, PuppyOrder
 
 
 class UserSerializer(serializers.ModelSerializer):
@@ -49,9 +49,18 @@ class PuppySerializer(serializers.ModelSerializer):
         fields = ('id', 'name', 'price', 'image_url', 'age', 'weight', 'description')
 
 
+class PuppyOrderSerializer(serializers.ModelSerializer):
+    puppy = serializers.ReadOnlyField(source='order.puppy')
+    order = serializers.ReadOnlyField(source='order.order')
+
+    class Meta:
+        model = PuppyOrder
+        fields = ('id', 'puppy', 'order', 'amount')
+
+
 class OrderSerializer(serializers.ModelSerializer):
     user = serializers.ReadOnlyField(source='user.username')
-    puppies = serializers.PrimaryKeyRelatedField(many=True, read_only=True)
+    puppies = PuppyOrderSerializer(source='puppyorder_set', many=True)
 
     class Meta:
         model = Order
