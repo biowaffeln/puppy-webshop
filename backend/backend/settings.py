@@ -150,4 +150,10 @@ STATIC_URL = '/static/'
 
 JWT_AUTH = {
     'JWT_RESPONSE_PAYLOAD_HANDLER': 'shop.utils.my_jwt_response_handler'
+
 }
+
+#SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+SECURE_SSL_REDIRECT = False
+SESSION_COOKIE_SECURE = False
+CSRF_COOKIE_SECURE = False
