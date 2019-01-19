@@ -11,7 +11,7 @@ class OrderListContainer extends Component {
   }
 
   async componentDidMount() {
-    try {
+    try { // TODO: Sinnvoller try/catch
 
     const orders = await Api.getMyOrders(this.props.token)
     this.setState({ orders })

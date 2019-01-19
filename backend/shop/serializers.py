@@ -50,17 +50,41 @@ class PuppySerializer(serializers.ModelSerializer):
 
 
 class PuppyOrderSerializer(serializers.ModelSerializer):
-    puppy = serializers.ReadOnlyField(source='order.puppy')
-    order = serializers.ReadOnlyField(source='order.order')
+    puppy = serializers.ReadOnlyField(source='puppy.id')
+    order = serializers.ReadOnlyField(source='order.id')
 
     class Meta:
         model = PuppyOrder
-        fields = ('id', 'puppy', 'order', 'amount')
+        fields = ('order', 'puppy', 'amount')
 
 
 class OrderSerializer(serializers.ModelSerializer):
     user = serializers.ReadOnlyField(source='user.username')
     puppies = PuppyOrderSerializer(source='puppyorder_set', many=True)
+    # user = UserSerializer(source='user.username')
+
+    def create(self, validated_data):
+        print(validated_data)
+        user = None
+        request = self.context.get("request")
+        if request and hasattr(request, "user"):
+            user = request.user
+        puppies = validated_data.pop("puppies")
+        print(puppies)
+        order = Order.objects.create(**validated_data)
+        total_price = 0
+        if "puppies" in self.initial_data:
+            puppies = self.initial_data.get("puppies")
+            for puppy in puppies:
+                puppy_id = puppy.get("id")
+                amount = puppy.get("amount")
+                puppy_instance = Puppy.objects.get(pk=puppy_id)
+                total_price += puppy_instance.price
+                PuppyOrder(order=order, puppy=puppy_instance, amount=amount).save()
+        print(order)
+        print("++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
+        order.save()
+        return Order
 
     class Meta:
         model = Order

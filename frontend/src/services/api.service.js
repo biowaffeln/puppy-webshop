@@ -11,26 +11,31 @@ async function getPuppyById(id) {
   return res.json()
 }
 async function getMyOrders(auth) {
-  console.log(auth.token)
   auth = auth.token
   const res = await fetch(REACT_APP_BACKEND_URL + `/shop/orders/`, {
       method: 'GET',
       headers: {
         "Content-Type": "application/json",
-        "Authorization": "Bearer " +  auth
+        "Authorization": "JWT " +  auth
       }
     })
   return res.json()
 }
 
-async function createOrder(order) {
-  console.log(order)
+async function createOrder(auth, puppies) {
+  auth = auth.token
+  puppies = puppies.map(element =>
+    element = {'id' : element.puppy.id, 'amount': element.amount}
+  )
+  // let puppies = {/*"total_price": "500.00", "puppies":*/ order}
+  console.log(JSON.stringify(puppies))
   const res = await fetch(REACT_APP_BACKEND_URL + `/shop/orders/`, {
       method: 'POST',
       headers: {
         "Content-Type": "application/json",
+        "Authorization": "JWT " +  auth
       },
-      body: JSON.stringify({ order })
+      body: JSON.stringify({ puppies })
     })
   return res.json()
 }

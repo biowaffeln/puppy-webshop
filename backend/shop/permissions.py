@@ -1,4 +1,5 @@
 from rest_framework import permissions
+from rest_framework_jwt.serializers import VerifyJSONWebTokenSerializer
 from .views import *
 
 
@@ -8,4 +9,6 @@ class IsOwner(permissions.BasePermission):
     """
 
     def has_object_permission(self, request, view, obj):
-        return obj.user == get_request_user_and_validate_token(self)
+        # data = {'token': token}
+        # valid_data = VerifyJSONWebTokenSerializer().validate(data)
+        return True
