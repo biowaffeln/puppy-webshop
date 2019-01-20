@@ -2,13 +2,14 @@ import React from 'react'
 import { Button } from 'reactstrap'
 import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
+import Api from '../../services/api.service'
 
 const total = puppies =>
   puppies
     .reduce((sum, p) => sum + p.amount * Number(p.puppy.price), 0)
     .toFixed(2)
 
-const CartCheckout = ({ puppies }) =>
+const CartCheckout = ({ puppies, token }) =>
   <>
     {puppies.map(p =>
       <p key={p.puppy.id}>
@@ -22,12 +23,13 @@ const CartCheckout = ({ puppies }) =>
       <span className="float-right">{total(puppies)} € </span>
     </p>
     <div className="d-flex justify-content-end mb-4">
-      <Button color="primary" className="mr-3" tag={Link} to="checkout">Buy Items!</Button>
+      <Button color="primary" className="mr-3" onClick={() => Api.createOrder(token, puppies)}>Buy Items!</Button>
       <Button color="primary" outline tag={Link} to="/">Continue Shopping</Button>
     </div>
   </>
 
 const mapStateToProps = (state) => ({
+  token: state.auth.data,
   puppies: Object.values(state.cart)
 })
 

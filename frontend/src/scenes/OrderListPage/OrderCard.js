@@ -1,20 +1,13 @@
 import React from 'react'
-import { connect } from 'react-redux'
 import {
-  Card, CardImg, CardText, CardBody,
-  CardTitle, CardSubtitle, Button
+  Card
 } from 'reactstrap'
 
 const OrderCard = ({ order }) => {
-  const { total_price, puppies, date, user } = order
   return (
     <div>
       <Card className="shadow-blurred">
-        <CardBody>
-          <CardTitle>{total_price}</CardTitle>
-          <CardSubtitle>{date}</CardSubtitle>
-          <CardText>{user}</CardText>
-        </CardBody>
+        {JSON.stringify(order, null, 4)}
       </Card>
     </div>
   )
