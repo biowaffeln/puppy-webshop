@@ -1,6 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import t from '../../services/translation.service'
+import { Link } from 'react-router-dom'
 import {
   Card, CardImg, CardText, CardBody,
   CardTitle, CardSubtitle, Button
@@ -26,6 +27,7 @@ const PuppyCard = ({ puppy, language, addPuppy, removePuppy, isInCart }) => {
                 {t[language].puppyButtonBuy}
               </Button>
           }
+          <Button tag={Link} to={`puppies/${puppy.id}`} outline color="primary" className="ml-2">{t[language].showDetails}</Button>
         </CardBody>
       </Card>
     </div>

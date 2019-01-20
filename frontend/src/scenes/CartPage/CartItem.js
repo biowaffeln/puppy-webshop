@@ -7,7 +7,7 @@ const CartItem = ({ puppy }) =>
   <Row>
     <Col xs={3} md={2}>
       <div className="avatar"
-        style={{ backgroundImage: `url(${puppy.imageUrl})` }}></div>
+        style={{ backgroundImage: `url(${puppy.image_url})` }}></div>
     </Col>
     <Col xs={5} md={3}>
       <h3 className="mb-1">{puppy.name}</h3>
