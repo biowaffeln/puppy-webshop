@@ -19,18 +19,9 @@ class Puppy(models.Model):
 
 
 class Order(models.Model):
-    total_price = models.DecimalField(max_digits=9, decimal_places=2, null=True)
     puppies = models.ManyToManyField(Puppy, through='PuppyOrder')
     date = models.DateTimeField(auto_now_add=True, blank=True)
     user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name='orders')
-
-    # def save(self, *args, **kwargs):
-    #     """
-    #     Create a new Order
-    #     """
-    #     # TODO: Code to check order here? Calculate total_price here!
-    #     print("An order is being saved: " + str(Order.id))
-    #     super(Order, self).save(*args, **kwargs)
 
     def __str__(self):
         return str(self.id)
@@ -40,6 +31,7 @@ class PuppyOrder(models.Model):
     order = models.ForeignKey(Order, on_delete=models.CASCADE)
     puppy = models.ForeignKey(Puppy, on_delete=models.CASCADE)
     amount = models.IntegerField()
+    price = models.DecimalField(max_digits=6, decimal_places=2)
 
     def __str__(self):
         return str(self.id)

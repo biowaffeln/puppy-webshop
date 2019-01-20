@@ -40,7 +40,7 @@ class OrderList(generics.ListCreateAPIView):
 
     def perform_create(self, serializer):
         print('Creating new order...')
-        serializer.save(puppies=self.request.data, user=self.request.user)
+        serializer.save(puppies_data=self.request.data, user=self.request.user)
         return Response(serializer.data)
 
 

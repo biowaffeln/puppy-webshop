@@ -27,7 +27,6 @@ async function createOrder(auth, puppies) {
   puppies = puppies.map(element =>
     element = {'id' : element.puppy.id, 'amount': element.amount}
   )
-  // let puppies = {/*"total_price": "500.00", "puppies":*/ order}
   console.log(JSON.stringify(puppies))
   const res = await fetch(REACT_APP_BACKEND_URL + `/shop/orders/`, {
       method: 'POST',
