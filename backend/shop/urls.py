@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import UserList, UserDetail, OrderList, OrderDetail, PuppyList, PuppyDetail, api_root
+from .views import UserList, UserDetail, OrderList, OrderDetail, PuppyList, PuppyDetail, api_root, AddressList
 from rest_framework.urlpatterns import format_suffix_patterns
 
 
@@ -11,4 +11,5 @@ urlpatterns = format_suffix_patterns([
     path('users/<int:pk>/', UserDetail.as_view(), name='user-detail'),
     path('orders/', OrderList.as_view(), name='order-list'),
     path('orders/<int:pk>', OrderDetail.as_view(), name='order-detail'),
+    path('address/', AddressList.as_view(), name='adress-list'),
 ])

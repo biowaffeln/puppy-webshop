@@ -69,7 +69,10 @@ REST_FRAMEWORK = {
     'TEST_REQUEST_DEFAULT_FORMAT': 'json'
 }
 CORS_ORIGIN_WHITELIST = (
-    'webspec70.mi.hdm-stuttgart.de'
+    'webspec70.mi.hdm-stuttgart.de',
+    'webspec69.mi.hdm-stuttgart.de',
+    'webspec68.mi.hdm-stuttgart.de',
+    'webspec67.mi.hdm-stuttgart.de'
 )
 
 ROOT_URLCONF = 'backend.urls'

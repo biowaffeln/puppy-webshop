@@ -28,7 +28,6 @@ async function createOrder(auth, puppies) {
   puppies = puppies.map(element =>
     element = {'id' : element.puppy.id, 'amount': element.amount}
   )
-  console.log(JSON.stringify(puppies))
   const res = await fetch(REACT_APP_BACKEND_URL + `/shop/orders/`, {
       method: 'POST',
       headers: {
@@ -40,9 +39,22 @@ async function createOrder(auth, puppies) {
   return res.json()
 }
 
+async function getMyAddress(auth) {
+  auth = auth.token
+  const res = await fetch(REACT_APP_BACKEND_URL + `/shop/address/`, {
+      method: 'GET',
+      headers: {
+        "Content-Type": "application/json",
+        "Authorization": "JWT " +  auth
+      }
+    })
+  return res.json()
+}
+
 export default {
   getAllPuppies,
   getPuppyById,
   getMyOrders,
-  createOrder
+  createOrder,
+  getMyAddress
 }
