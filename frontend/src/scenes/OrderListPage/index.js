@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import OrderListPage from './OrderListPage'
 import Api from '../../services/api.service'
+import t from '../../services/translation.service'
+
 
 class OrderListContainer extends Component {
 
@@ -11,10 +13,9 @@ class OrderListContainer extends Component {
   }
 
   async componentDidMount() {
-    try { // TODO: Sinnvoller try/catch
-
-    const orders = await Api.getMyOrders(this.props.token)
-    this.setState({ orders })
+    try {
+      const orders = await Api.getMyOrders(this.props.token)
+      this.setState({ orders })
     }
     catch {
       this.setState({error: true})
@@ -23,7 +24,7 @@ class OrderListContainer extends Component {
 
   render() {
     if(this.state.error) {
-      return <p>ein Fehler ist aufgetreten!</p>
+      return <p>{t[this.props.language].errorTextOrders}</p>
     }
     return (
       <OrderListPage orders={this.state.orders} language={this.props.language} />

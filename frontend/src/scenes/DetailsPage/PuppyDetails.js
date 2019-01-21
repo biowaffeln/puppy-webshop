@@ -16,7 +16,7 @@ const PuppyDetails = ({ isInCart, puppy, language, addPuppy, removePuppy }) => (
         <h1 className="mb-0">{puppy.name}</h1>
         <div className="d-flex text-muted">
         <p className="mr-2">{puppy.weight}g</p>
-        <p>{puppy.age}3 months</p>
+        <p>{puppy.age} months</p>
         </div>
         <p>{puppy.description[language]}</p>
         <div style={{marginTop: 'auto'}}>

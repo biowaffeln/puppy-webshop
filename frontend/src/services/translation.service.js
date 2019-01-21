@@ -15,6 +15,7 @@ const translations = {
     emptyCart: 'Dein Einkaufswagen ist leer',
     goToCart: 'zum Einkaufswagen',
     showDetails: 'mehr Infos',
+    errorTextOrders: 'Beim Abrufen der Bestellungen ist ein Fehler aufgetreten.'
   },
   EN: {
     login: 'login',
@@ -32,6 +33,7 @@ const translations = {
     emptyCart: 'Your cart is empty',
     goToCart: 'go to cart',
     showDetails: 'show details',
+    errorTextOrders: 'An error occurred while accessing your orders.'
   },
 }
 
