@@ -46,13 +46,22 @@ class Address(models.Model):
     zip = models.CharField(max_length=10, blank=True)
     city = models.CharField(max_length=30, blank=True)
 
+    def __str__(self):
+        return str(self.user)
+
 
 @receiver(post_save, sender=User)
 def create_user_address(sender, instance, created, **kwargs):
+    """
+    Creates an Address entry if a User is created
+    """
     if created:
         Address.objects.create(user=instance)
 
 
 @receiver(post_save, sender=User)
 def save_user_address(sender, instance, **kwargs):
+    """
+    Updates the Address entry if a User is updated
+    """
     instance.address.save()

@@ -4,7 +4,7 @@ const translations = {
     logout: 'logout',
     cart: 'Einkaufswagen',
     language: 'Sprache',
-    landingPageHeader: 'Kaufen sie süße Welpen!',
+    landingPageHeader: 'Kaufen Sie süße Welpen!',
     landingPageContent: 'Dieser Shop ist der perfekte Ort dafür und es ist ganz sicher nicht illegal.',
     landingPageButtonText: 'Los gehts!',
     puppyButtonBuy: 'Kaufen!',
