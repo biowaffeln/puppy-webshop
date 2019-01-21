@@ -17,6 +17,9 @@ def api_root(request, format=None):
 
 
 class OrderList(generics.ListCreateAPIView):
+    """
+    Lists all orders of an authenticated user or creates an order
+    """
     queryset = Order.objects.all()
     permission_classes = (permissions.IsAuthenticated,)
     serializer_class = OrderSerializer
@@ -25,12 +28,14 @@ class OrderList(generics.ListCreateAPIView):
         return Order.objects.all().filter(user=self.request.user)
 
     def perform_create(self, serializer):
-        print('Creating new order...')
         serializer.save(puppies_data=self.request.data, user=self.request.user)
         return Response(serializer.data)
 
 
 class OrderDetail(generics.RetrieveAPIView):
+    """
+    Retrieves a specific order of an authenticated user
+    """
     permission_classes = (permissions.IsAuthenticated,)
     queryset = Order.objects.all()
     serializer_class = OrderSerializer
@@ -40,6 +45,9 @@ class OrderDetail(generics.RetrieveAPIView):
 
 
 class UserList(generics.ListAPIView):
+    """
+    Retrieves authenticated user
+    """
     permission_classes = (permissions.IsAuthenticated,)
     serializer_class = UserSerializer
 
@@ -47,25 +55,28 @@ class UserList(generics.ListAPIView):
         return User.objects.all().filter(id=self.request.user.id, username=self.request.user).select_related('address')
 
 
-class UserDetail(generics.RetrieveAPIView):
-    permission_classes = (permissions.IsAuthenticated,)
-    queryset = User.objects.all().select_related('address')
-    serializer_class = UserSerializer
-
-
 class PuppyList(generics.ListAPIView):
+    """
+    Lists all puppies
+    """
     permission_classes = (permissions.AllowAny,)
     queryset = Puppy.objects.all()
     serializer_class = PuppySerializer
 
 
 class PuppyDetail(generics.RetrieveAPIView):
+    """
+    Retrieves a specific puppy
+    """
     permission_classes = (permissions.AllowAny,)
     queryset = Puppy.objects.all()
     serializer_class = PuppySerializer
 
 
 class AddressList(generics.ListAPIView):
+    """
+    Retrieves authenticated users' address
+    """
     permission_classes = (permissions.IsAuthenticated,)
     serializer_class = AddressSerializer
 

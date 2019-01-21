@@ -1,7 +1,9 @@
 from rest_framework import serializers
 from django.contrib.auth.models import User
+import logging
 from .models import Order, Puppy, PuppyOrder, Address
 
+logger = logging.getLogger('backend.shop.serializers')
 
 class AddressSerializer(serializers.ModelSerializer):
 

@@ -39,6 +39,8 @@ class PuppyOrder(models.Model):
 
 class Address(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
+    first_name = models.CharField(max_length=30, blank=True)
+    last_name = models.CharField(max_length=30, blank=True)
     country = models.CharField(max_length=30, blank=True)
     street = models.CharField(max_length=30, blank=True)
     zip = models.CharField(max_length=10, blank=True)
