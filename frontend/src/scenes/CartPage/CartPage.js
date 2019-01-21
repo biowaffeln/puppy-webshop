@@ -22,7 +22,7 @@ const CartPage = ({ cart, language }) =>
           {cart.map(puppy =>
             <React.Fragment key={puppy.id}>
               <Col xs={12}>
-                <CartItem puppy={puppy} />
+                <CartItem puppy={puppy} language={language} />
               </Col>
               <Col xs={12}>
                 <hr />
