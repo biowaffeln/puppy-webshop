@@ -36,6 +36,7 @@ ALLOWED_HOSTS = [
 # Application definition
 
 INSTALLED_APPS = [
+    'sslserver',
     'shop.apps.ShopConfig',
     'django.contrib.admin',
     'django.contrib.auth',
