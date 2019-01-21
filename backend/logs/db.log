@@ -1,0 +1,300 @@
+Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Users\mkvet\.virtualenvs\backend-ZuzYmCFP\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\mkvet\.virtualenvs\backend-ZuzYmCFP\lib\site-packages\django\core\handlers\base.py", line 111, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Users\mkvet\.virtualenvs\backend-ZuzYmCFP\lib\site-packages\django\urls\resolvers.py", line 520, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<URLResolver <module 'shop.urls' from 'C:\\Users\\mkvet\\Documents\\Uni\\7_Semester\\WebDevSpecial\\puppy-webshop\\backend\\shop\\urls.py'> (None:None) 'shop/'>], [<URLResolver <URLPattern list> (admin:admin) 'admin/'>], [<URLPattern 'token-auth/'>], [<URLResolver <module 'rest_framework.urls' from 'C:\\Users\\mkvet\\.virtualenvs\\backend-ZuzYmCFP\\lib\\site-packages\\rest_framework\\urls.py'> (rest_framework:rest_framework) 'api-auth/'>], [<URLResolver <module 'letsencrypt.urls' from 'C:\\Users\\mkvet\\.virtualenvs\\backend-ZuzYmCFP\\lib\\site-packages\\letsencrypt\\urls.py'> (None:None) '\.well-known/'>]], 'path': ''}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\mkvet\.virtualenvs\backend-ZuzYmCFP\lib\site-packages\django\template\base.py", line 829, in _resolve_lookup
+    current = current[bit]
+TypeError: 'URLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\mkvet\.virtualenvs\backend-ZuzYmCFP\lib\site-packages\django\template\base.py", line 837, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'URLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\mkvet\.virtualenvs\backend-ZuzYmCFP\lib\site-packages\django\template\base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\mkvet\.virtualenvs\backend-ZuzYmCFP\lib\site-packages\django\template\base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in <URLResolver <module 'shop.urls' from 'C:\\Users\\mkvet\\Documents\\Uni\\7_Semester\\WebDevSpecial\\puppy-webshop\\backend\\shop\\urls.py'> (None:None) 'shop/'>
+Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Users\mkvet\.virtualenvs\backend-ZuzYmCFP\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\mkvet\.virtualenvs\backend-ZuzYmCFP\lib\site-packages\django\core\handlers\base.py", line 111, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Users\mkvet\.virtualenvs\backend-ZuzYmCFP\lib\site-packages\django\urls\resolvers.py", line 520, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<URLResolver <module 'shop.urls' from 'C:\\Users\\mkvet\\Documents\\Uni\\7_Semester\\WebDevSpecial\\puppy-webshop\\backend\\shop\\urls.py'> (None:None) 'shop/'>], [<URLResolver <URLPattern list> (admin:admin) 'admin/'>], [<URLPattern 'token-auth/'>], [<URLResolver <module 'rest_framework.urls' from 'C:\\Users\\mkvet\\.virtualenvs\\backend-ZuzYmCFP\\lib\\site-packages\\rest_framework\\urls.py'> (rest_framework:rest_framework) 'api-auth/'>], [<URLResolver <module 'letsencrypt.urls' from 'C:\\Users\\mkvet\\.virtualenvs\\backend-ZuzYmCFP\\lib\\site-packages\\letsencrypt\\urls.py'> (None:None) '\.well-known/'>]], 'path': ''}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\mkvet\.virtualenvs\backend-ZuzYmCFP\lib\site-packages\django\template\base.py", line 829, in _resolve_lookup
+    current = current[bit]
+TypeError: 'URLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\mkvet\.virtualenvs\backend-ZuzYmCFP\lib\site-packages\django\template\base.py", line 837, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'URLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\mkvet\.virtualenvs\backend-ZuzYmCFP\lib\site-packages\django\template\base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\mkvet\.virtualenvs\backend-ZuzYmCFP\lib\site-packages\django\template\base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in <URLResolver <URLPattern list> (admin:admin) 'admin/'>
+Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Users\mkvet\.virtualenvs\backend-ZuzYmCFP\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\mkvet\.virtualenvs\backend-ZuzYmCFP\lib\site-packages\django\core\handlers\base.py", line 111, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Users\mkvet\.virtualenvs\backend-ZuzYmCFP\lib\site-packages\django\urls\resolvers.py", line 520, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<URLResolver <module 'shop.urls' from 'C:\\Users\\mkvet\\Documents\\Uni\\7_Semester\\WebDevSpecial\\puppy-webshop\\backend\\shop\\urls.py'> (None:None) 'shop/'>], [<URLResolver <URLPattern list> (admin:admin) 'admin/'>], [<URLPattern 'token-auth/'>], [<URLResolver <module 'rest_framework.urls' from 'C:\\Users\\mkvet\\.virtualenvs\\backend-ZuzYmCFP\\lib\\site-packages\\rest_framework\\urls.py'> (rest_framework:rest_framework) 'api-auth/'>], [<URLResolver <module 'letsencrypt.urls' from 'C:\\Users\\mkvet\\.virtualenvs\\backend-ZuzYmCFP\\lib\\site-packages\\letsencrypt\\urls.py'> (None:None) '\.well-known/'>]], 'path': ''}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\mkvet\.virtualenvs\backend-ZuzYmCFP\lib\site-packages\django\template\base.py", line 829, in _resolve_lookup
+    current = current[bit]
+TypeError: 'URLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\mkvet\.virtualenvs\backend-ZuzYmCFP\lib\site-packages\django\template\base.py", line 837, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'URLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\mkvet\.virtualenvs\backend-ZuzYmCFP\lib\site-packages\django\template\base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\mkvet\.virtualenvs\backend-ZuzYmCFP\lib\site-packages\django\template\base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in <URLResolver <module 'rest_framework.urls' from 'C:\\Users\\mkvet\\.virtualenvs\\backend-ZuzYmCFP\\lib\\site-packages\\rest_framework\\urls.py'> (rest_framework:rest_framework) 'api-auth/'>
+Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Users\mkvet\.virtualenvs\backend-ZuzYmCFP\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\mkvet\.virtualenvs\backend-ZuzYmCFP\lib\site-packages\django\core\handlers\base.py", line 111, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Users\mkvet\.virtualenvs\backend-ZuzYmCFP\lib\site-packages\django\urls\resolvers.py", line 520, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<URLResolver <module 'shop.urls' from 'C:\\Users\\mkvet\\Documents\\Uni\\7_Semester\\WebDevSpecial\\puppy-webshop\\backend\\shop\\urls.py'> (None:None) 'shop/'>], [<URLResolver <URLPattern list> (admin:admin) 'admin/'>], [<URLPattern 'token-auth/'>], [<URLResolver <module 'rest_framework.urls' from 'C:\\Users\\mkvet\\.virtualenvs\\backend-ZuzYmCFP\\lib\\site-packages\\rest_framework\\urls.py'> (rest_framework:rest_framework) 'api-auth/'>], [<URLResolver <module 'letsencrypt.urls' from 'C:\\Users\\mkvet\\.virtualenvs\\backend-ZuzYmCFP\\lib\\site-packages\\letsencrypt\\urls.py'> (None:None) '\.well-known/'>]], 'path': ''}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\mkvet\.virtualenvs\backend-ZuzYmCFP\lib\site-packages\django\template\base.py", line 829, in _resolve_lookup
+    current = current[bit]
+TypeError: 'URLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\mkvet\.virtualenvs\backend-ZuzYmCFP\lib\site-packages\django\template\base.py", line 837, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'URLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\mkvet\.virtualenvs\backend-ZuzYmCFP\lib\site-packages\django\template\base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\mkvet\.virtualenvs\backend-ZuzYmCFP\lib\site-packages\django\template\base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in <URLResolver <module 'letsencrypt.urls' from 'C:\\Users\\mkvet\\.virtualenvs\\backend-ZuzYmCFP\\lib\\site-packages\\letsencrypt\\urls.py'> (None:None) '\.well-known/'>
+Not Found: /
+"GET / HTTP/1.1" 404 2361
+Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Users\mkvet\.virtualenvs\backend-ZuzYmCFP\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\mkvet\.virtualenvs\backend-ZuzYmCFP\lib\site-packages\django\core\handlers\base.py", line 111, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Users\mkvet\.virtualenvs\backend-ZuzYmCFP\lib\site-packages\django\urls\resolvers.py", line 520, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<URLResolver <module 'shop.urls' from 'C:\\Users\\mkvet\\Documents\\Uni\\7_Semester\\WebDevSpecial\\puppy-webshop\\backend\\shop\\urls.py'> (None:None) 'shop/'>], [<URLResolver <URLPattern list> (admin:admin) 'admin/'>], [<URLPattern 'token-auth/'>], [<URLResolver <module 'rest_framework.urls' from 'C:\\Users\\mkvet\\.virtualenvs\\backend-ZuzYmCFP\\lib\\site-packages\\rest_framework\\urls.py'> (rest_framework:rest_framework) 'api-auth/'>], [<URLResolver <module 'letsencrypt.urls' from 'C:\\Users\\mkvet\\.virtualenvs\\backend-ZuzYmCFP\\lib\\site-packages\\letsencrypt\\urls.py'> (None:None) '\.well-known/'>]], 'path': 'favicon.ico'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\mkvet\.virtualenvs\backend-ZuzYmCFP\lib\site-packages\django\template\base.py", line 829, in _resolve_lookup
+    current = current[bit]
+TypeError: 'URLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\mkvet\.virtualenvs\backend-ZuzYmCFP\lib\site-packages\django\template\base.py", line 837, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'URLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\mkvet\.virtualenvs\backend-ZuzYmCFP\lib\site-packages\django\template\base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\mkvet\.virtualenvs\backend-ZuzYmCFP\lib\site-packages\django\template\base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in <URLResolver <module 'shop.urls' from 'C:\\Users\\mkvet\\Documents\\Uni\\7_Semester\\WebDevSpecial\\puppy-webshop\\backend\\shop\\urls.py'> (None:None) 'shop/'>
+Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Users\mkvet\.virtualenvs\backend-ZuzYmCFP\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\mkvet\.virtualenvs\backend-ZuzYmCFP\lib\site-packages\django\core\handlers\base.py", line 111, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Users\mkvet\.virtualenvs\backend-ZuzYmCFP\lib\site-packages\django\urls\resolvers.py", line 520, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<URLResolver <module 'shop.urls' from 'C:\\Users\\mkvet\\Documents\\Uni\\7_Semester\\WebDevSpecial\\puppy-webshop\\backend\\shop\\urls.py'> (None:None) 'shop/'>], [<URLResolver <URLPattern list> (admin:admin) 'admin/'>], [<URLPattern 'token-auth/'>], [<URLResolver <module 'rest_framework.urls' from 'C:\\Users\\mkvet\\.virtualenvs\\backend-ZuzYmCFP\\lib\\site-packages\\rest_framework\\urls.py'> (rest_framework:rest_framework) 'api-auth/'>], [<URLResolver <module 'letsencrypt.urls' from 'C:\\Users\\mkvet\\.virtualenvs\\backend-ZuzYmCFP\\lib\\site-packages\\letsencrypt\\urls.py'> (None:None) '\.well-known/'>]], 'path': 'favicon.ico'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\mkvet\.virtualenvs\backend-ZuzYmCFP\lib\site-packages\django\template\base.py", line 829, in _resolve_lookup
+    current = current[bit]
+TypeError: 'URLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\mkvet\.virtualenvs\backend-ZuzYmCFP\lib\site-packages\django\template\base.py", line 837, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'URLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\mkvet\.virtualenvs\backend-ZuzYmCFP\lib\site-packages\django\template\base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\mkvet\.virtualenvs\backend-ZuzYmCFP\lib\site-packages\django\template\base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in <URLResolver <URLPattern list> (admin:admin) 'admin/'>
+Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Users\mkvet\.virtualenvs\backend-ZuzYmCFP\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\mkvet\.virtualenvs\backend-ZuzYmCFP\lib\site-packages\django\core\handlers\base.py", line 111, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Users\mkvet\.virtualenvs\backend-ZuzYmCFP\lib\site-packages\django\urls\resolvers.py", line 520, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<URLResolver <module 'shop.urls' from 'C:\\Users\\mkvet\\Documents\\Uni\\7_Semester\\WebDevSpecial\\puppy-webshop\\backend\\shop\\urls.py'> (None:None) 'shop/'>], [<URLResolver <URLPattern list> (admin:admin) 'admin/'>], [<URLPattern 'token-auth/'>], [<URLResolver <module 'rest_framework.urls' from 'C:\\Users\\mkvet\\.virtualenvs\\backend-ZuzYmCFP\\lib\\site-packages\\rest_framework\\urls.py'> (rest_framework:rest_framework) 'api-auth/'>], [<URLResolver <module 'letsencrypt.urls' from 'C:\\Users\\mkvet\\.virtualenvs\\backend-ZuzYmCFP\\lib\\site-packages\\letsencrypt\\urls.py'> (None:None) '\.well-known/'>]], 'path': 'favicon.ico'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\mkvet\.virtualenvs\backend-ZuzYmCFP\lib\site-packages\django\template\base.py", line 829, in _resolve_lookup
+    current = current[bit]
+TypeError: 'URLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\mkvet\.virtualenvs\backend-ZuzYmCFP\lib\site-packages\django\template\base.py", line 837, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'URLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\mkvet\.virtualenvs\backend-ZuzYmCFP\lib\site-packages\django\template\base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\mkvet\.virtualenvs\backend-ZuzYmCFP\lib\site-packages\django\template\base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in <URLResolver <module 'rest_framework.urls' from 'C:\\Users\\mkvet\\.virtualenvs\\backend-ZuzYmCFP\\lib\\site-packages\\rest_framework\\urls.py'> (rest_framework:rest_framework) 'api-auth/'>
+Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Users\mkvet\.virtualenvs\backend-ZuzYmCFP\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\mkvet\.virtualenvs\backend-ZuzYmCFP\lib\site-packages\django\core\handlers\base.py", line 111, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Users\mkvet\.virtualenvs\backend-ZuzYmCFP\lib\site-packages\django\urls\resolvers.py", line 520, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<URLResolver <module 'shop.urls' from 'C:\\Users\\mkvet\\Documents\\Uni\\7_Semester\\WebDevSpecial\\puppy-webshop\\backend\\shop\\urls.py'> (None:None) 'shop/'>], [<URLResolver <URLPattern list> (admin:admin) 'admin/'>], [<URLPattern 'token-auth/'>], [<URLResolver <module 'rest_framework.urls' from 'C:\\Users\\mkvet\\.virtualenvs\\backend-ZuzYmCFP\\lib\\site-packages\\rest_framework\\urls.py'> (rest_framework:rest_framework) 'api-auth/'>], [<URLResolver <module 'letsencrypt.urls' from 'C:\\Users\\mkvet\\.virtualenvs\\backend-ZuzYmCFP\\lib\\site-packages\\letsencrypt\\urls.py'> (None:None) '\.well-known/'>]], 'path': 'favicon.ico'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\mkvet\.virtualenvs\backend-ZuzYmCFP\lib\site-packages\django\template\base.py", line 829, in _resolve_lookup
+    current = current[bit]
+TypeError: 'URLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\mkvet\.virtualenvs\backend-ZuzYmCFP\lib\site-packages\django\template\base.py", line 837, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'URLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\mkvet\.virtualenvs\backend-ZuzYmCFP\lib\site-packages\django\template\base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\mkvet\.virtualenvs\backend-ZuzYmCFP\lib\site-packages\django\template\base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in <URLResolver <module 'letsencrypt.urls' from 'C:\\Users\\mkvet\\.virtualenvs\\backend-ZuzYmCFP\\lib\\site-packages\\letsencrypt\\urls.py'> (None:None) '\.well-known/'>
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 2412

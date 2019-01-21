@@ -11,6 +11,7 @@ djangorestframework = "*"
 djangorestframework-jwt = "*"
 "psycopg2-binary" = "*"
 "django-letsencrypt" = "*"
+"django-sslserver" = "*"
 
 [dev-packages]
 
