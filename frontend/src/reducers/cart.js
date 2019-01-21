@@ -23,7 +23,7 @@ const cart = (state = {}, action) => {
       }
 
     case 'LOGOUT':
-    case 'CLEAR_ALL':
+    case 'CLEAR_CART':
       return []
 
     default:
