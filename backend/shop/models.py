@@ -3,6 +3,10 @@ from django.conf import settings
 from django.contrib.auth.models import User
 from django.db.models.signals import post_save
 from django.dispatch import receiver
+import logging
+
+logger = logging.getLogger('backend.shop.models')
+
 
 
 class Puppy(models.Model):
@@ -13,7 +17,7 @@ class Puppy(models.Model):
     weight = models.IntegerField(null=True)
     description_de = models.CharField(max_length=500, null=True)
     description_en = models.CharField(max_length=500, null=True)
-
+    logger.info('puppy models crated')
     def __str__(self):
         return self.name
 
@@ -22,7 +26,7 @@ class Order(models.Model):
     puppies = models.ManyToManyField(Puppy, through='PuppyOrder')
     date = models.DateTimeField(auto_now_add=True, blank=True)
     user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name='orders')
-
+    logger.info('Order models created')
     def __str__(self):
         return str(self.id)
 

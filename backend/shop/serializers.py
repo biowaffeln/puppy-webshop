@@ -2,6 +2,9 @@ from rest_framework import serializers
 from rest_framework_jwt.settings import api_settings
 from django.contrib.auth.models import User
 from .models import Order, Puppy, PuppyOrder
+import logging
+
+logger = logging.getLogger('backend.shop.serializers')
 
 
 class UserSerializer(serializers.ModelSerializer):
@@ -16,6 +19,7 @@ class UserSerializerWithToken(serializers.ModelSerializer):
 
     token = serializers.SerializerMethodField()
     password = serializers.CharField(write_only=True)
+    logger.info('class UserSerializerWithToken')
 
     def get_token(self, obj):
         jwt_payload_handler = api_settings.JWT_PAYLOAD_HANDLER
@@ -23,6 +27,7 @@ class UserSerializerWithToken(serializers.ModelSerializer):
 
         payload = jwt_payload_handler(obj)
         token = jwt_encode_handler(payload)
+        logger.info('class UserSerializerWithToken')
         return token
 
     def create(self, validated_data):
