@@ -24,7 +24,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'bx1znfev-xpkjxss0$t@%*rgc_1v(k(74pkd+rb4k4186wqs+)'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 CORS_ORIGIN_ALLOW_ALL = True
 
@@ -70,11 +70,11 @@ REST_FRAMEWORK = {
     'TEST_REQUEST_DEFAULT_FORMAT': 'json'
 }
 CORS_ORIGIN_WHITELIST = (
-    'webspec71.mi.hdm-stuttgart.de',
-    'webspec70.mi.hdm-stuttgart.de',
-    'webspec69.mi.hdm-stuttgart.de',
-    'webspec68.mi.hdm-stuttgart.de',
-    'webspec67.mi.hdm-stuttgart.de'
+    'webspec71.mi.hdm-stuttgart.de:8000',
+    'webspec70.mi.hdm-stuttgart.de:8000',
+    'webspec69.mi.hdm-stuttgart.de:8000',
+    'webspec68.mi.hdm-stuttgart.de:8000',
+    'webspec67.mi.hdm-stuttgart.de:8000'
 )
 
 ROOT_URLCONF = 'backend.urls'
@@ -158,7 +158,7 @@ JWT_AUTH = {
     'JWT_EXPIRATION_DELTA': timedelta(days=2),
 }
 
-#SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 SECURE_SSL_REDIRECT = True
 SESSION_COOKIE_SECURE = True
 CSRF_COOKIE_SECURE = True
