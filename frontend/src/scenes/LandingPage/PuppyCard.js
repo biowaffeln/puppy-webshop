@@ -15,9 +15,9 @@ const PuppyCard = ({ puppy, language, addPuppy, removePuppy, isInCart }) => {
       <Card className="shadow-blurred">
         <CardImg top width="100%" src={image_url} alt="Puppy Image" />
         <CardBody>
-          <CardTitle>{name}</CardTitle>
+          <CardTitle className="card-bold">{name}</CardTitle>
           <CardSubtitle>{price} €</CardSubtitle>
-          <CardText>{description[language]}</CardText>
+          <CardText className="card-text mt-3 mb-4">{description[language]}</CardText>
           {
             isInCart(puppy.id)
               ? <Button outline color="primary" onClick={() => removePuppy(puppy.id)}>

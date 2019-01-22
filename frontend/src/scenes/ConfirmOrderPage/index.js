@@ -1,10 +1,10 @@
 import React from 'react'
-import { Container, Button } from 'reactstrap'
+import { Container, Col, Row, Button } from 'reactstrap'
 import { connect } from 'react-redux'
 import PuppyCartList from '../../components/PuppyCartList'
 import Api from '../../services/api.service'
 import UserAddress from './UserAddress'
-import { clearCart } from '../../actions';
+import { clearCart } from '../../actions'
 
 class ConfirmOrderPage extends React.Component {
 
@@ -34,13 +34,21 @@ class ConfirmOrderPage extends React.Component {
       </Container>
     }
 
-    return <Container>
-      <h2 className="mt-4">your order:</h2>
-      <PuppyCartList puppies={puppies} />
-      <h2 className="mt-4">your address:</h2>
-      {address && <UserAddress address={address} />}
-      <Button color="primary" onClick={this.order}>Order Now!</Button>
-    </Container>
+    return (
+      <Container>
+        <Row>
+          <Col xs="12" md="6">
+            <h2 className="my-4">your order:</h2>
+            <PuppyCartList puppies={puppies} />
+          </Col>
+          <Col xs="12" md="6">
+            <h2 className="my-4">your address:</h2>
+            {address && <UserAddress address={address} />}
+            <Button color="primary" onClick={this.order}>Order Now!</Button>
+          </Col>
+        </Row>
+      </Container >
+    )
   }
 }
 
