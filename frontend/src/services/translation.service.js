@@ -1,3 +1,5 @@
+// Mark, Niklas
+
 const translations = {
   DE: {
     login: 'login',
