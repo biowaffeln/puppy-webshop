@@ -1,3 +1,4 @@
+"""Max"""
 from shop.serializers import UserSerializer
 
 
