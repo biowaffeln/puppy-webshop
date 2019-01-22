@@ -1,5 +1,5 @@
 import React from 'react'
-import { Container, Col, Row, Button } from 'reactstrap'
+import { Card, Container, Col, Row, Button } from 'reactstrap'
 import { connect } from 'react-redux'
 import PuppyCartList from '../../components/PuppyCartList'
 import Api from '../../services/api.service'
@@ -39,7 +39,9 @@ class ConfirmOrderPage extends React.Component {
         <Row>
           <Col xs="12" md="6">
             <h2 className="my-4">your order:</h2>
-            <PuppyCartList puppies={puppies} />
+            <Card className="p-4 shadow-blurred">
+              <PuppyCartList puppies={puppies} />
+            </Card>
           </Col>
           <Col xs="12" md="6">
             <h2 className="my-4">your address:</h2>
@@ -47,7 +49,7 @@ class ConfirmOrderPage extends React.Component {
             <Button color="primary" onClick={this.order}>Order Now!</Button>
           </Col>
         </Row>
-      </Container >
+      </Container>
     )
   }
 }
