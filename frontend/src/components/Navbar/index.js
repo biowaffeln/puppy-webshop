@@ -1,3 +1,5 @@
+// Mark
+
 import { logout } from '../../actions'
 import Navbar from './Navbar'
 import { compose } from 'redux'

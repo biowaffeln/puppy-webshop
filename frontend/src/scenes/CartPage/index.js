@@ -1,4 +1,6 @@
-import {connect} from 'react-redux'
+// Mark
+
+import { connect } from 'react-redux'
 import CartPage from './CartPage'
 
 const mapStateToProps = state => ({

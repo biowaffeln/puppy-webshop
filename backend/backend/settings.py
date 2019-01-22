@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'bx1znfev-xpkjxss0$t@%*rgc_1v(k(74pkd+rb4k4186wqs+)'
 
-# SECURITY WARNING: don't run with debug turned on in production! TODO: Turn off!
+# SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
 CORS_ORIGIN_ALLOW_ALL = True
@@ -65,11 +65,12 @@ REST_FRAMEWORK = {
     ),
     'DEFAULT_AUTHENTICATION_CLASSES': (
         'rest_framework_jwt.authentication.JSONWebTokenAuthentication',
-        'rest_framework.authentication.SessionAuthentication',  # TODO: Turn off!
+        'rest_framework.authentication.SessionAuthentication',
     ),
     'TEST_REQUEST_DEFAULT_FORMAT': 'json'
 }
 CORS_ORIGIN_WHITELIST = (
+    'webspec71.mi.hdm-stuttgart.de',
     'webspec70.mi.hdm-stuttgart.de',
     'webspec69.mi.hdm-stuttgart.de',
     'webspec68.mi.hdm-stuttgart.de',
