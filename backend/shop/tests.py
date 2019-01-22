@@ -1,3 +1,4 @@
+"""Max"""
 from django.test import TestCase, RequestFactory
 from django.test import Client
 from django.contrib.auth.models import User
@@ -10,7 +11,7 @@ from rest_framework import status
 
 
 from .models import Puppy
-"""Max"""
+
 """Test ob man ein puppy erstellen kann und ob es dann auch existiert"""
 class ModelsPuppyTestCase(TestCase):
     def setUp(self):
@@ -24,7 +25,7 @@ class ModelsPuppyTestCase(TestCase):
         self.assertEqual(welpe.weight, 3)
 
 
-"""Der Test Erstellt einen Nutzer und prüft dann ob der name und die Email Stimmen. 
+"""Der Test Erstellt einen Nutzer und prüft dann ob der name und die Email stimmen. 
     Kein Passwort Test möglich, da diese nicht gespeichert werden """
 class UserTest(TestCase):
     def setUp(self):
@@ -39,7 +40,7 @@ class UserTest(TestCase):
 
 
 
-"""HttpRequest test auf /token-auth, da man dort kein 200 Statuscode 
+"""HttpRequest Test auf /token-auth, da man dort kein 200 Statuscode 
     als nicht eingeloggter Nutzer zurückbekommen sollte"""
 class httpRequestTest(APITestCase):
     def test_url_root(self):
