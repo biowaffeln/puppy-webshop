@@ -1,3 +1,4 @@
+"""Max"""
 from django.test import TestCase, RequestFactory
 from django.test import Client
 from django.contrib.auth.models import User
@@ -10,7 +11,7 @@ from rest_framework import status
 
 
 from .models import Puppy
-"""Max"""
+
 """Test ob man ein puppy erstellen kann und ob es dann auch existiert"""
 class ModelsPuppyTestCase(TestCase):
     def setUp(self):
