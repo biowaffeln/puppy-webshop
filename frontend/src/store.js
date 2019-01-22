@@ -1,3 +1,5 @@
+// Mark
+
 import { createBrowserHistory } from 'history'
 import createReducer from './reducers'
 import { createStore, compose, applyMiddleware } from 'redux'

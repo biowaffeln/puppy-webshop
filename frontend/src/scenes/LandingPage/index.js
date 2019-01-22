@@ -1,3 +1,5 @@
+// Mark
+
 import React from 'react'
 import { connect } from 'react-redux'
 import t from '../../services/translation.service'

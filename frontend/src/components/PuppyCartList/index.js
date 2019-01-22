@@ -1,3 +1,5 @@
+// Mark
+
 import React from 'react'
 
 const total = puppies =>
@@ -14,7 +16,7 @@ const PuppyCartList = ({ puppies }) =>
     </p>
   )}
     <hr />
-    <p className="pb-4" style={{ fontSize: '1.3em' }}>
+    <p style={{ fontSize: '1.3em', marginBottom: 9}}>
       <span>total: </span>
       <span className="float-right">{total(puppies)} € </span>
     </p>
