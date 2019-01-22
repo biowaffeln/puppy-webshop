@@ -26,7 +26,7 @@ class ModelsPuppyTestCase(TestCase):
 
 
 """Der Test Erstellt einen Nutzer und prüft dann ob der name und die Email Stimmen. 
-    Kein Passwort Test möglich, da diese nicht gespeichert werden """
+    Kein Passwort Test möglich, da diese nicht gespeichert werden/verschlüsselt sind """
 class UserTest(TestCase):
     def setUp(self):
         self.factory = RequestFactory()
