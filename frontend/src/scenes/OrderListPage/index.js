@@ -8,7 +8,7 @@ import t from '../../services/translation.service'
 class OrderListContainer extends Component {
 
   state = {
-    orders: [],
+    orders: null,
     error: false
   }
 
@@ -27,6 +27,7 @@ class OrderListContainer extends Component {
       return <p>{t[this.props.language].errorTextOrders}</p>
     }
     return (
+      this.state.orders &&
       <OrderListPage orders={this.state.orders} language={this.props.language} />
     )
   }

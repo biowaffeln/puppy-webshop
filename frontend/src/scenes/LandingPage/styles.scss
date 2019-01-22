@@ -7,9 +7,17 @@
     width: 600px;
     max-width: 90%;
   }
+  h1 {
+    font-weight: 700;
+  }
 }
 @media (min-width: 768px) {
   #landingpage-jumbotron {
     padding: 72px 16px 96px;
   }
+}
+
+.card-bold {
+  font-size: 1.8em;
+  font-weight: 700;
 }

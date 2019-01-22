@@ -16,18 +16,13 @@ const OrderListPage = ({ orders, language }) =>
 
     : <Container>
       <Row className="mt-5">
-        <Col>
-          {orders.map(order =>
-            <React.Fragment key={order.id}>
-              <Col xs={12}>
-                <OrderCard order={order} />
-              </Col>
-              <Col xs={12}>
-                <hr />
-              </Col>
-            </React.Fragment>
-          )}
-        </Col>
+        {orders.map(order =>
+          <React.Fragment key={order.id}>
+            <Col xs={12} md={6} lg={4} className="mb-4">
+              <OrderCard order={order} />
+            </Col>
+          </React.Fragment>
+        )}
       </Row>
     </Container>
 
