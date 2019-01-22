@@ -1,8 +1,9 @@
-// Mark
+// Mark, Alex
 
 import React from 'react'
 import { Card, Container, Col, Row, Button } from 'reactstrap'
 import { connect } from 'react-redux'
+import { Link } from 'react-router-dom'
 import PuppyCartList from '../../components/PuppyCartList'
 import Api from '../../services/api.service'
 import UserAddress from './UserAddress'
@@ -12,13 +13,18 @@ class ConfirmOrderPage extends React.Component {
 
   state = {
     address: null,
-    ordered: false
+    ordered: false,
+    error: false
   }
 
   order = async () => {
-    await Api.createOrder(this.props.auth, this.props.puppies)
-    this.setState({ ordered: true })
-    this.props.clearCart()
+    try {
+      await Api.createOrder(this.props.auth, this.props.puppies)
+      this.setState({ ordered: true })
+      this.props.clearCart()
+    } catch {
+      this.setState({ error: true })
+    }
   }
 
   async componentDidMount() {
@@ -28,12 +34,27 @@ class ConfirmOrderPage extends React.Component {
 
   render() {
     const { puppies } = this.props
-    const { address, ordered } = this.state
+    const { address, ordered, error } = this.state
+
+    if (error) { 
+      return (
+        <Container className="mt-5 d-flex flex-column align-items-center">
+          <h2>an error occured :(</h2>
+          <p>you're not supposed to see this</p>
+          <Link to="/">go back to shopping</Link>
+        </Container>
+      )
+    }
 
     if (ordered) {
-      return <Container>
-        <p>thanks for ordering!</p>
-      </Container>
+      return (
+        <Container className="mt-5 d-flex flex-column align-items-center">
+          <p style={{ fontSize: '4em' }}><span role="img" aria-label="Party Cone">🎉</span></p>
+          <p className="mb-0">thanks for ordering!</p>
+          <p>your puppy will soon be delivered</p>
+          <Link color="primary" to="orders">see my orders</Link>
+        </Container>
+      )
     }
 
     return (
