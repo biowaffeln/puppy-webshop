@@ -40,7 +40,7 @@ class UserTest(TestCase):
 
 
 
-"""HttpRequest test auf /token-auth, da man dort kein 200 Statuscode 
+"""HttpRequest Test auf /token-auth, da man dort kein 200 Statuscode 
     als nicht eingeloggter Nutzer zurückbekommen sollte"""
 class httpRequestTest(APITestCase):
     def test_url_root(self):
